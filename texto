@@ -1,0 +1,10 @@
+<nav class="menu">
+            <%= link_to (t '.artists'), artists_path %> |
+            <%= link_to (t '.atelier'), atelier_path %> |
+            <%= link_to (t '.viewing_room'), viewing_room_path %> |
+            <%= link_to (t '.store'), store_path %> |
+            <%= link_to (t '.contact'), contact_path %>
+          </nav>
+
+
+          https://www.youtube.com/watch?v=bHRXRYTppHM

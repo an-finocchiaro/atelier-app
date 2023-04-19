@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Atelier Cité</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
     <header>
-      <div class="cabecalho">
-        <div class="logoimg">
-          <a href="http://www.ateliercite.com.br">
-            <img src="/assets/logo.jpg" class="logo" alt="Logotipo Atelier Cité">
-          </a>
+      <nav>
+        <a href="/" class="logo">
+          <img src="/assets/logo.jpg" class="logoimg" alt="Logotipo Atelier Cité">
+        </a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
-        <div>
-          <nav class="menu">
-            <%= link_to (t '.artists'), artists_path %> |
-            <%= link_to (t '.atelier'), atelier_path %> |
-            <%= link_to (t '.viewing_room'), viewing_room_path %> |
-            <%= link_to (t '.store'), store_path %> |
-            <%= link_to (t '.contact'), contact_path %>
-          </nav>
-        </div>
-      </div>
+        <ul class="nav-list">
+          <li><a href="#">artistas</a></li>
+          <li><a href="#">o atelier</a></li>
+          <li><a href="#">viewing room</a></li>
+          <li><a href="#">loja edições limitadas</a></li>
+          <li><a href="#">contato</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
       <div>
