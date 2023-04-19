@@ -1,0 +1,7 @@
+pt-BR:
+  home:
+    index:
+      message_adm: "Área Restrita a Administradores - Olá, "
+      message_user: "Área de Usuários - Olá, "
+      order_new: 'Cadastrar Ordem de Serviço'
+      orders_index: 'Ver Ordens de Serviço'

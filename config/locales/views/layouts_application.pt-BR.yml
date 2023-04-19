@@ -1,0 +1,9 @@
+pt-BR:
+  layouts:
+    application:
+      artists: "artistas"
+      atelier: "o atelier"
+      viewing_room: "viewing room"
+      store: "loja edições limitadas"
+      contact: "contato"
+      
