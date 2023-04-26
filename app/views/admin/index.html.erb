@@ -4,6 +4,9 @@
       <p>Usuário: <%= current_user.name %>  |  <%= current_user.email %></p>
     </div>
     <div>
+      <%= link_to 'Cadastrar artista', new_artist_path %>
+    </div>
+    <div>
       <%= button_to 'Sair', destroy_user_session_path, method: :delete %>
     </div>
   <% end %>

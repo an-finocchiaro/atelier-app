@@ -1,0 +1,9 @@
+<h4>Cadastrar artista</h4>
+
+<%= form_with(model: @artist) do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <%= f.submit 'Cadastrar' %>
+<% end %>

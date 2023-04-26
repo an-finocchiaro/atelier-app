@@ -34,4 +34,4 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/spec/system/adm_login_spec.rb
+/spec/system/admin/*
