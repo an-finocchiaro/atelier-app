@@ -1,0 +1,10 @@
+<div>
+ <% if user_signed_in? %>
+    <div>
+      <p>Usuário: <%= current_user.name %>  |  <%= current_user.email %></p>
+    </div>
+    <div>
+      <%= button_to 'Sair', destroy_user_session_path, method: :delete %>
+    </div>
+  <% end %>
+</div>
