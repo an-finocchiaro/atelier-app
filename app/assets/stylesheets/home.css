@@ -137,3 +137,9 @@ nav {
   95% { margin-left: -300%; }
   100% { margin-left: -400%; }
 }
+
+.form-admin {
+  font-family: 'Open Sans', sans-serif;
+  font-size: medium;
+  padding: 2px;
+}

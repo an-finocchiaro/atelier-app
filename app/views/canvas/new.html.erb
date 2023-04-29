@@ -1,0 +1,47 @@
+<div class="form-admin"> 
+  <h4>Cadastrar tela</h4>
+
+  <%= form_with(model: [@artist, @canva]) do |f| %>
+    <div>
+      <%= f.label :artist_id %>
+      <%= f.collection_select :artist_id, @artists, :id, :name %>
+    </div>
+    <div>
+      <%= f.label :code %>
+      <%= f.number_field :code %>
+    </div>
+    <div>
+      <%= f.label :collection_name %>
+      <%= f.text_field :collection_name %>
+    </div>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div>
+      <%= f.label :technique %>
+      <%= f.text_field :technique %>
+    </div>
+    <div>
+      <%= f.label :height %>
+      <%= f.number_field :height %>
+    </div>
+    <div>
+      <%= f.label :width %>
+      <%= f.number_field :width %>
+    </div>
+    <div>
+      <%= f.label :year %>
+      <%= f.number_field :year %>
+    </div>
+    <div>
+      <%= f.label :frame %>
+      <%= f.text_field :frame %>
+    </div>
+    <div>
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+    </div>
+    <%= f.submit 'Cadastrar' %>
+  <% end %>
+</div>

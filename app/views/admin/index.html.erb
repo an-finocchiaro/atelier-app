@@ -1,4 +1,4 @@
-<div>
+<div class="form-admin">
  <% if user_signed_in? %>
     <div>
       <p>Usuário: <%= current_user.name %>  |  <%= current_user.email %></p>
@@ -6,6 +6,10 @@
     <div>
       <%= link_to 'Cadastrar artista', new_artist_path %>
     </div>
+    <div>
+      <%= link_to 'Cadastrar tela', new_canva_path %>
+    </div>
+    
     <div>
       <%= button_to 'Sair', destroy_user_session_path, method: :delete %>
     </div>

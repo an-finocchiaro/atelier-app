@@ -1,0 +1,26 @@
+pt-BR:
+  available: 'Disponível'
+  collection: 'Acervo'
+  sold: 'Vendida'
+  hide: 'Não exibir no site'
+  show: 'Exibir no site'
+  activerecord:
+    models:
+      canva:
+        one: Tela
+        other: Telas
+    attributes:
+      canva:
+        artist_id: 'Artista'
+        artist: 'Artista'
+        code: 'Referência'
+        status: 'Situação'
+        display: 'Exibir no site'
+        collection_name: 'Nome da coleção'
+        title: 'Título'
+        technique: 'Técnica'
+        height: 'Altura'
+        width: 'Largura'
+        year: 'Ano'
+        frame: 'Moldura'
+        price: 'Preço'

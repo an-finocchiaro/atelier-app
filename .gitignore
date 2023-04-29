@@ -35,4 +35,5 @@
 /config/master.key
 
 /spec/system/admin/*
-/app/controllers/admin_controller.rb
+/texto
+
