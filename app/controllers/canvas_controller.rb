@@ -5,7 +5,7 @@ class CanvasController < ApplicationController
   end
 
   def create
-    canva_params = params.require(:canva).permit(:artist_id, :code, :collection_name, :title, :technique, :height, :width, :year, :frame, :price)
+    canva_params = params.require(:canva).permit(:artist_id, :code, :collection_name, :title, :technique, :height, :width, :year, :frame, :price, :image)
     @canva = Canva.new(canva_params)
     @canvas = Canva.all
     if @canva.save
