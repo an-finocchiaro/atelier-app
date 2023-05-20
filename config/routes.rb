@@ -10,5 +10,7 @@ Rails.application.routes.draw do
     post 'available', on: :member
     post 'collection', on: :member
     post 'sold', on: :member
+    post 'hide', on: :member
+    post 'exhibit', on: :member
   end
 end

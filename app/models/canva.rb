@@ -4,5 +4,5 @@ class Canva < ApplicationRecord
   validates :code, :title, :technique, :height, :width, :year, :price, presence: true
   validates :code, :height, :width, :price, numericality: true
   enum :status, { available: 0, collection: 1, sold: 2 }
-  enum :display, { hide: 0, show: 1 }
+  enum :display, { hide: 0, exhibit: 1 }
 end

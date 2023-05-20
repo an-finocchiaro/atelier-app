@@ -1,5 +1,5 @@
 class CanvasController < ApplicationController
-  before_action :set_canva, only: %i[show available collection sold update edit]
+  before_action :set_canva, only: %i[show available collection sold hide exhibit update edit]
   def new
     @canva = Canva.new
     @artists = Artist.all
@@ -39,6 +39,16 @@ class CanvasController < ApplicationController
   def sold
     @canva.sold!
     redirect_to @canva, notice: 'Alteração efetuada com sucesso, tela vendida'
+  end
+
+  def hide
+    @canva.hide!
+    redirect_to @canva, notice: 'Alteração efetuada com sucesso, tela não será exibida'
+  end
+
+  def exhibit
+    @canva.exhibit!
+    redirect_to @canva, notice: 'Alteração efetuada com sucesso, tela será exibida'
   end
 
   private

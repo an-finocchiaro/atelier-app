@@ -28,5 +28,11 @@
       <%= button_to 'Disponível', available_canva_path(@canva.id) %>
       <%= button_to 'Acervo', collection_canva_path(@canva.id) %>
     <% end %>
+    <% if @canva.hide? %>
+      <%= button_to 'Mostrar', exhibit_canva_path(@canva.id) %>
+    <% end %>
+    <% if @canva.exhibit? %>
+      <%= button_to 'Não Exibir', hide_canva_path(@canva.id) %>
+    <% end %>
   <% end %>
  </div>
