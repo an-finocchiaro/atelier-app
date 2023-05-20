@@ -1,8 +1,9 @@
  <h2><%= @artist.name %></h2>
  <div>
-  <%= link_to image_tag(@canva.image, style:"width:500px; height:500px"), @canva.image, :target => '_blank' %>
+  <% if @canva.image.attached? %>
+    <%= link_to image_tag(@canva.image, style:"width:500px; height:500px"), @canva.image, :target => '_blank' %>
+  <% end %>
  </div>
-
 
  <div>
   <p><%= @canva.title %></p>
@@ -11,4 +12,21 @@
   <p><%= @canva.year %></p>
   <p>referência: <%= @canva.code %></p>
   <p>coleção: <%= @canva.collection_name %></p>
+ </div>
+
+ <div>
+  <% if user_signed_in? %>
+    <% if @canva.available? %>
+      <%= button_to 'Acervo', collection_canva_path(@canva.id) %>
+      <%= button_to 'Vendida', sold_canva_path(@canva.id) %>
+    <% end %>
+    <% if @canva.collection? %>
+      <%= button_to 'Disponível', available_canva_path(@canva.id) %>
+      <%= button_to 'Vendida', sold_canva_path(@canva.id) %>
+    <% end %>
+    <% if @canva.sold? %>
+      <%= button_to 'Disponível', available_canva_path(@canva.id) %>
+      <%= button_to 'Acervo', collection_canva_path(@canva.id) %>
+    <% end %>
+  <% end %>
  </div>

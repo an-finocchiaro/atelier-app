@@ -1,4 +1,5 @@
 class CanvasController < ApplicationController
+  before_action :set_canva, only: %i[show available collection sold update edit]
   def new
     @canva = Canva.new
     @artists = Artist.all
@@ -16,9 +17,34 @@ class CanvasController < ApplicationController
     end
   end
 
+  def index
+    @canvas = Canva.all
+  end
+
   def show
     @canva = Canva.find(params[:id])
     @artist = Artist.find(@canva.artist_id)
+  end
+
+  def available
+    @canva.available!
+    redirect_to @canva, notice: 'Alteração efetuada com sucesso, tela disponível'
+  end
+
+  def collection
+    @canva.collection!
+    redirect_to @canva, notice: 'Alteração efetuada com sucesso, tela em acervo'
+  end
+
+  def sold
+    @canva.sold!
+    redirect_to @canva, notice: 'Alteração efetuada com sucesso, tela vendida'
+  end
+
+  private
+
+  def set_canva
+    @canva = Canva.find(params[:id])
   end
 
 end

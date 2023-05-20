@@ -1,1 +1,9 @@
- <h4>Relação de telas</h4>
+ <h4>Telas Cadastradas</h4>
+
+ <div>
+    <% if user_signed_in? %>
+      <% @canvas.each do |canva| %>
+        <p>artista: <%= canva.artist.name %>  |  código: <%= link_to canva.code, canva_path(canva.id) %></p>
+      <% end %>
+    <% end %>
+ </div>
