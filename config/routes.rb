@@ -4,8 +4,12 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get '/admin', to: 'admin#index'
+  get '/isabelle_tuchband', to: 'artists#isabelle'
+  get '/emile_tuchband',  to: 'artists#emile'
+  get '/verena_matzen',  to: 'artists#verena'
 
   resources :artists, only: [:new, :create, :index, :show] 
+
   resources :canvas, only: [:new, :create, :index, :show] do
     post 'available', on: :member
     post 'collection', on: :member
