@@ -78,5 +78,19 @@ RSpec.describe Canva, type: :model do
 
       expect(canva.valid?).to eq false
     end
+
+    it 'false when code length is < 3' do
+      artist = Artist.create!(name: 'Julia Piva')
+      canva = Canva.new(artist_id: artist.id, code: 33, collection_name: 'Brasileiras', title: 'Nuvens', technique: 'óleo sobre tela', height: 100, width: 120, year: 2011, frame:'sem moldura', price: 10000)
+
+      expect(canva.valid?).to eq false
+    end
+
+    it 'false when code length is > 5' do
+      artist = Artist.create!(name: 'Julia Piva')
+      canva = Canva.new(artist_id: artist.id, code: 222333, collection_name: 'Brasileiras', title: 'Nuvens', technique: 'óleo sobre tela', height: 100, width: 120, year: 2011, frame:'sem moldura', price: 10000)
+
+      expect(canva.valid?).to eq false
+    end
   end
 end
