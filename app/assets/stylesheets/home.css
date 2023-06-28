@@ -11,6 +11,107 @@
   margin-left: 10px;
 }
 
+.box-player {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #FF1493;
+}
+
+.box-music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-frame {
+  margin-top: 20px;
+  width: 25%;
+  min-width: 290px;
+  height: 100px;
+}
+
+/* playlist text animation */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  font-size: 30px;
+  line-height: 40px;
+  color: #FF6EC7;
+  height: 120px;
+  overflow: hidden;
+}
+
+.visible {
+  font-weight: 600;
+  overflow: hidden;
+  height: 40px;
+  padding: 0 40px;
+}
+
+.visible:before {
+  content:'(';
+  line-height: 40px;
+  color: #FF6EC7;
+}
+
+.visible:after {
+  content: ')';
+  top: 0;
+  line-height: 40px;
+  
+}
+
+.visible:before, .visible:after {
+  top: 30px;
+  color: rgb(19, 218, 46);
+  font-size: 40px;
+  animation: 2s linear 0s normal none infinite opacity;
+}
+
+ul {
+  margin-left: 30px;
+  text-align: center;
+  list-style: none;
+  animation: 7s linear 0s normal none infinite change;
+}
+
+ul li {
+  line-height: 40px;
+}
+
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes change {
+  0%, 12%, 100% {
+    transform: translateY(-28%);
+  }
+  17%,29% {
+    transform: translateY(-53%);
+  }
+  34%,46% {
+    transform: translateY(-78%);
+  }
+  51%,63% {
+    transform: translateY(-53%);
+  }
+  68%,80% {
+    transform: translateY(-28%);
+  }
+  85%,97% {
+    transform: translateY(-53%);
+  }
+}
+
 /* navbar */
 /* add a background color to the top navigation */
 .topnav {
@@ -96,7 +197,7 @@
   animation-name: names;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  animation-delay: 1s;
+  animation-delay: 2s;
   transition: 6s;
   margin-top: -2rem;;
 }
@@ -106,7 +207,7 @@
   color: white;
   font-size: 9vw;
   animation-name: names;
-  animation-delay: 1.5s;
+  animation-delay: 2.5s;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   transition: 6s;
@@ -257,5 +358,26 @@ svg {
     transition: 1s ease-in-out;
     border-radius: 15px;
     transform: rotate(0deg);
+  }
+  .box-player {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .content {
+    height: 90px;
+  }
+  .music-frame {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    min-width: none;
+    height: 90px;
+  }
+  .visible {
+    margin-left: 10px;
+    padding: 0 20px;
+  }
+  
+  ul {
+    margin-left: -20px;
   }
 }
