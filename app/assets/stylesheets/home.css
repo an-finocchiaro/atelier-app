@@ -355,7 +355,7 @@ svg {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  background-color: #e8dd8f;
+  background-color: #ccff33;
   height: 400px;
   overflow: hidden;
 }
@@ -408,11 +408,21 @@ svg {
   height: 600px;
   left:0%;
   animation-name: slider;
-  animation-delay: 1s;
-  animation-duration: 10s;
+  animation-delay: 5s;
+  animation-duration: 15s;
   animation-timing-function: ease-in-out;
   animation-iteration-count:infinite;
-  transition: 2s;
+  transition: 4s;
+}
+
+.slider-ul.slider-dois {
+  animation-delay: 7.5s;
+  animation-duration: 27s;
+}
+
+.slider-ul.slider-tres {
+  animation-delay: 10s;
+  animation-duration: 30s;
 }
 
 .slider li {
@@ -420,14 +430,21 @@ svg {
   min-width: 100%;
   min-height: 200px;
   list-style: none;
- 
 }
 
 .slider-img {
   height: 200px;
   object-fit: cover;
   min-height: 200px;
-  min-width: 120%;
+  min-width: 100%;
+}
+
+.newspaper-img {
+  height: 222px;
+}
+.isavaso-img {
+  width: 120%;
+  margin-left: -11px;
 }
 
 @keyframes slider{
