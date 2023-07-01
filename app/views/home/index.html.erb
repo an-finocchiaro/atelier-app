@@ -144,11 +144,26 @@
 <section class="store-section">
   <div class="store">
     <div class="store-head">
-      <p class="store-title">STORE   |   LIMITED EDITIONS</p>
+      <p class="store-title">STORE | LIMITED EDITIONS</p>
       <button class="store-button">
-	      <span>PURCHASE<br>HAPPINESS</span>
+	      <span>PURCHASE HAPPINESS</span>
       </button>
     </div>
   <div class="store-grid">
+    <% if @products.any? %>
+      <% @products.each do |product| %>
+        <div class="store-card">
+          <div class="product-img">
+            <%= image_tag product.image %>
+          </div>
+          <p class="product-title"><%= product.title %></p>
+          <p class="product-description"><%= product.artist.name %> - <%= product.technique %></p>
+          <p class="product-description"><%= product.height %> x <%= product.width %> cm - <%= product.year %> - <%= product.edition %></p>
+          <p class="product-description">Referência: <%= product.sku %></p>
+          <a href="#" class="product-link">VER NA LOJA</a>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 </section>
+

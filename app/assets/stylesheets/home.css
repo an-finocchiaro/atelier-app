@@ -479,27 +479,26 @@ svg {
 }
 
 /** store **/
-
 .store-head {
-  background-color: #37013a;
-  /*background-image: linear-gradient(135deg, #0042D9 0%, #0093FF 60%, #0078FF 100%);*/
+  background-color: rgb(82, 3, 82);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  max-height: 100px;
+  height: 100px;
+  align-items: center;
 }
 
 .store-button {
-  margin-top: 10px;;
-  width: 200px;
-  height: 200px;
+  margin-left: 220px;
+  width: 230px;
+  height: 60px;
 	cursor: pointer;
 	position: relative;
-	border-radius: 50%;
+	border-radius: 22px;
   font-weight: 400;
   font-family: 'Bagel Fat One';
-  font-size: 26px;
-  letter-spacing: 1px;;
+  font-size: 17px;
+  letter-spacing: 1px;
 	border: 1px solid #c62368;
 	background-image: linear-gradient(-180deg, #FF89D6 0%, #FF1493 100%);
 	box-shadow: 0 -0.25rem 1.5rem #FF1493 inset,
@@ -508,40 +507,72 @@ svg {
 }
 
 .store-button span {
-	color: whitesmoke;
+	color: white;
 }
 
 .store-title {
-  width: 100%;
-  text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  font-family: 'Encode Sans Semi Condensed';
+  margin-left: 40px;
+  width: 200px;
+  font-family: 'Anton';
   font-weight: 400;
-  font-size: 14px;
+  font-size: 38px;
   letter-spacing: 1px;
   color: whitesmoke;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 4s steps(24) infinite alternate,
+    blink 2000ms steps(24) infinite normal;
 }
 
 .store-grid {
-  height: 300px;
-  background-color: whitesmoke;
+  background-color: #FAE6FA;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
 }
-h1 {
-  font-size: 90px;
-  white-space: nowrap;
+
+.store-card {
+  font-family: 'Encode Sans Semi Condensed';
+  color: #000000;
+  max-width: 100%;
   overflow: hidden;
-  animation: typewriter 2s steps(13) infinite alternate,
-    blink 800ms steps(13) infinite normal;
-  border-right: 5px solid black;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+.product-img {
+  height: 300px;
+  background-image: image('azul.jpg');
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.product-description {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.product-link {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgb(82, 3, 82);
+}
+
 
 @keyframes typewriter {
   from {
     width: 0%;
   }
   to {
-    width: 50%;
+    width: 100%;
   }
 }
 @keyframes blink {
