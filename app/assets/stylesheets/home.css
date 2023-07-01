@@ -8,11 +8,54 @@ body {
 }
 
 .form-admin {
+  width: 80%;
+  margin-left: 30px;
   font-family: 'Encode Sans Semi Condensed', sans-serif;
-  font-size: medium;
-  padding: 2px;
+  font-size: 18px;
   margin-top: 25px;
+  text-decoration: none;
+}
+
+select {
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  font-size: 15px;
   margin-left: 10px;
+  width:200px;
+  border: none;
+  height: 35px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.form-button {
+  text-align: center;
+  font-size: 15px;
+  color: white;
+  border: none;
+  background-color: #21ab9b;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 15px;
+  width: 110px;
+}
+
+.form-input {
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  font-size: 15px;
+  padding-left: 10px;
+  width: 100%;
+  height: 35px;
+  border: none;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 11px;
+  margin-top: 5px;
+}
+
+.logout {
+  margin-left: 0px;
+  font-size: medium;
 }
 
 /** navbar **/

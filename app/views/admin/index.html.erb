@@ -3,22 +3,23 @@
     <div>
       <p>Usuário: <%= current_user.name %>  |  <%= current_user.email %></p>
     </div>
+    <br><br>
     <div>
       <%= link_to 'Cadastrar artista', new_artist_path %>
-    </div>
+    </div><br>
     <div>
       <%= link_to 'Cadastrar tela', new_canva_path %>
-    </div>
+    </div><br>
     <div>
       <%= link_to 'Cadastrar produto loja', new_product_path %>
-    </div>
+    </div><br>
     
     <div>
-      <%= button_to 'Sair', destroy_user_session_path, method: :delete %>
-    </div>
+      <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: "form-button" %>
+    </div><br>
     <div class="form-admin">
       <% if user_signed_in? %>
-        <%= link_to 'logout', destroy_user_session_path, data: { turbo_method: :delete } %>
+        <%= link_to 'logout', destroy_user_session_path, data: { turbo_method: :delete }, class: "form-admin logout" %>
       <% end %>
     </div>
   <% end %>

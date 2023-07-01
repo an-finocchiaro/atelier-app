@@ -1,11 +1,11 @@
 <div class="form-admin"> 
-  <h4>Cadastrar artista</h4>
+  <h2>Cadastrar artista</h2><br><br>
 
   <%= form_with(model: @artist) do |f| %>
     <div>
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, class: "form-input" %>
     </div>
-    <%= f.submit 'Cadastrar' %>
+    <%= f.submit 'Cadastrar', class: "form-button" %>
   <% end %>
 </div>

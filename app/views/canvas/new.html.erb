@@ -1,51 +1,51 @@
 <div class="form-admin"> 
-  <h4>Cadastrar tela</h4>
+  <h2>Cadastrar tela</h2><br><br>
 
   <%= form_with(model: [@artist, @canva]) do |f| %>
     <div>
       <%= f.label :artist_id %>
       <%= f.collection_select :artist_id, @artists, :id, :name %>
-    </div>
+    </div><br>
     <div>
       <%= f.label :code %>
-      <%= f.number_field :code %>
+      <%= f.number_field :code, class: "form-input" %>
     </div>
     <div>
       <%= f.label :collection_name %>
-      <%= f.text_field :collection_name %>
+      <%= f.text_field :collection_name, class: "form-input" %>
     </div>
     <div>
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, class: "form-input" %>
     </div>
     <div>
       <%= f.label :technique %>
-      <%= f.text_field :technique %>
+      <%= f.text_field :technique, class: "form-input" %>
     </div>
     <div>
       <%= f.label :height %>
-      <%= f.number_field :height %>
+      <%= f.number_field :height, class: "form-input" %>
     </div>
     <div>
       <%= f.label :width %>
-      <%= f.number_field :width %>
+      <%= f.number_field :width, class: "form-input" %>
     </div>
     <div>
       <%= f.label :year %>
-      <%= f.number_field :year %>
+      <%= f.number_field :year, class: "form-input" %>
     </div>
     <div>
       <%= f.label :frame %>
-      <%= f.text_field :frame %>
+      <%= f.text_field :frame, class: "form-input" %>
     </div>
     <div>
       <%= f.label :price %>
-      <%= f.number_field :price %>
+      <%= f.number_field :price, class: "form-input" %>
     </div>
     <div>
       <%= f.label :image %>
       <%= f.file_field :image, accept: 'image/jpeg' %>
     </div>
-    <%= f.submit 'Cadastrar' %>
+    <%= f.submit 'Cadastrar', class: "form-button" %>
   <% end %>
 </div>
