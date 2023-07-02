@@ -1,5 +1,5 @@
-<section class="artists reveal">
-  <div class="box-grid" class="isabelle">
+<section class="artists">
+  <div class="box-grid reveal isabelle">
     <div class="box-image">
       <img src="/assets/index/272.JPEG" alt="pintura de Isabelle Tuchband" class="photo">
     </div>
@@ -23,7 +23,7 @@
       </div>
     </div>
   </div>
-  <div class="box-grid">
+  <div class="box-grid reveal emile">
     <div class="box-image">
       <img src="/assets/index/044.JPEG" alt="pintura de Émile Tuchband" class="photo">
     </div>
@@ -47,7 +47,7 @@
       </div>
     </div>
   </div>
-  <div class="box-grid" class="verena">
+  <div class="box-grid reveal verena">
     <div class="box-image">
       <img src="/assets/index/verenacapa.jpg" alt="pintura de Verena Matzen" class="photo">
     </div>
@@ -73,7 +73,7 @@
   </div>
 </section>
 <section class="atelier-section">
-  <div class="atelier-grid">
+  <div class="atelier-grid reveal">
     <div class="atelier-description">
       <h3 class="atelier-title">L'ATELIER</h3>
       <p class="atelier-text">Inaugurado no ano de 1989 na rua Bela Cintra, em São Paulo, o Atelier Cité conta uma colorida história de herança e compartilhamento artístico entre Émile Tuchband, Isabelle Tuchband - pai e filha - e Verena Matzen.</p>
@@ -143,27 +143,30 @@
 </section>
 <section class="store-section">
   <div class="store">
-    <div class="store-head">
+    <div class="store-head reveal">
       <p class="store-title">STORE | LIMITED EDITIONS</p>
       <button class="store-button">
 	      <span>PURCHASE HAPPINESS</span>
       </button>
     </div>
-  <div class="store-grid">
+  <div class="store-grid reveal">
     <% if @products.any? %>
       <% @products.each do |product| %>
         <div class="store-card">
-          <div class="product-img">
-            <%= image_tag product.image %>
+          <div class="product-img-box">
+            <% if product.image.attached? %>
+              <%= image_tag product.image, class: "product-img" %>
+            <% else %>
+              <p>Imagem indisponível</p>
+            <% end %>
           </div>
           <p class="product-title"><%= product.title %></p>
           <p class="product-description"><%= product.artist.name %> - <%= product.technique %></p>
           <p class="product-description"><%= product.height %> x <%= product.width %> cm - <%= product.year %> - <%= product.edition %></p>
-          <p class="product-description">Referência: <%= product.sku %></p>
-          <a href="#" class="product-link">VER NA LOJA</a>
+          <p class="product-description reference">referência: <%= product.sku %></p>
+          <a href="#"><p  class="product-link">VER NA LOJA</p></a>
         </div>
       <% end %>
     <% end %>
   </div>
 </section>
-
