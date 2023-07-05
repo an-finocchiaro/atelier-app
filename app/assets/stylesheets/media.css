@@ -1,0 +1,237 @@
+
+/** medias **/
+/**navbar**/
+/* when the screen is less than xx pixels wide hide all links except for the first one, show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1150px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    font-size: 20px;
+  }
+  .topnav a.nav-link {
+    margin-left: 0px;
+  }
+}
+
+/* the "responsive" class is added to the topnav with js when user clicks on the icon */
+@media screen and (max-width: 1150px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/**music box**/
+@media screen and (max-width: 800px) {
+  .box-player {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .content {
+    height: 90px;
+    margin-left: -10px;
+  }
+  .box-music {
+    padding: 0;
+    margin: 0;
+    height: 100px;
+  }
+  .music-frame {
+    padding-top: 0;
+    margin-top: 8px;
+    min-width: 330px;
+    height: 100px;
+  }
+  .visible {
+    padding: 0 0px;
+    font-weight: 600;
+  }
+  .visible:before {
+    margin-left: -10px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+  }
+ 
+  .sound-ul {
+    margin-left: 10px;
+  }
+  .sound-li {
+    margin-left: -10px;
+  }
+}
+
+
+/**artists**/
+@media screen and (max-width: 1150px) {
+  .artist-name {
+    margin-top: -15px;
+  }
+  .artist-surname {
+    margin-top: -20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .box-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 420px 420px;
+    max-height: none;
+    overflow:auto;
+  }
+  .box-names {
+    grid-template-rows: 140px 140px 140px;
+    overflow: auto;
+  }
+  .photo {
+    width: 100%;
+    object-fit: cover;
+    min-height: 420px;
+  }
+  .artist-name {
+    font-size: 23vw;
+    margin-top: -20px;
+    margin-left: 30px;
+  }
+  .artist-name.emile {
+    margin-top: -20px;
+  }
+  .artist-surname {
+    font-size: 15vw;
+    margin-top: 20px;
+    margin-left: 30px;
+  }
+  .box-button {
+    margin-top: 40px;
+    margin-left: 120px;
+  }
+  .btn {
+    width: 200px;
+    height: 70px;
+    cursor: pointer;
+    background: #FF6EC7;
+    border: 1px solid #F4FF00;
+    outline: none;
+    transition: 1s ease-in-out;
+    border-radius: 15px;
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .box-grid {
+    grid-template-rows: 420px 330px;
+    max-height: none;
+    overflow:auto;
+  }
+  .box-names {
+    grid-template-rows: 110px 110px 110px;
+  }
+  .artist-surname {
+    font-size: 17vw;
+    margin-top: -10px;
+  }
+  .box-button {
+    margin-top: 10px;
+    margin-left: 70px;
+  }
+  .artist-name {
+    margin-top: -15px;
+  }
+  .artist-name.emile {
+    margin-top: -15px;
+  }
+}
+
+/* atelier section */
+@media screen and (max-width: 1000px) {
+  .atelier-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .atelier-title {
+    font-size: 10vw;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .atelier-title {
+    font-size: 12vw;
+  }
+  .atelier-title {
+    margin-left: 20px;
+  }
+  .atelier-text {
+    margin-left: 20px;
+  }
+}
+
+/** store **/
+@media screen and (max-width: 1100px) {
+  .store-button {
+    margin-left: 170px;
+  }
+  .store-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .store-button {
+    margin-left: 170px;
+  }
+  .store-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .store-head {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    height: 220px;
+    text-align: center;
+  }
+  .store-title {
+    font-size: 55px;
+  }
+  .store-button {
+    margin-left:30%;
+    width: 290px;
+    height: 75px;
+    font-size: 23px;
+    margin-bottom: 25px;
+  }
+  .product-title {
+    font-size: 25px;
+  }
+  .product-description {
+    font-size: 22px;
+  }
+  .product-description.reference {
+    font-size: 17px;
+  }
+  .product-link {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .store-title {
+    font-size: 8vw;
+  }
+  .store-button {
+    margin-left:25%;
+  }
+  .store-button {
+    width: 240px;
+    height: 60px;
+    font-size: 17px;
+  }
+}
