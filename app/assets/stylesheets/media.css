@@ -1,5 +1,13 @@
 
 /** medias **/
+@media screen and (max-width: 2000px) {
+  
+}
+
+
+
+
+
 /**navbar**/
 /* when the screen is less than xx pixels wide hide all links except for the first one, show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1150px) {
@@ -151,6 +159,42 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .box-grid {
+    grid-template-rows: 350px 300px;
+  }
+  .box-names {
+    grid-template-rows: 100px 100px 100px;
+  }
+  .artist-surname {
+    font-size: 19vw;
+    margin-top: -8px;
+  }
+  .box-button {
+    margin-top: 10px;
+    margin-left: 70px;
+  }
+  .artist-name {
+    margin-top: -10px;
+  }
+  .artist-name.emile {
+    margin-top: -10px;
+  }
+  .photo {
+    min-height: 350px;
+    z-index: -2;
+  }
+  .btn {
+    width: 180px;
+  }
+  .atelier-title {
+    font-size: 20vw;
+  }
+  .atelier-title {
+    font-size: 8vw;
+  }
+}
+
 /* atelier section */
 @media screen and (max-width: 1000px) {
   .atelier-grid {
@@ -172,6 +216,10 @@
   .atelier-text {
     margin-left: 20px;
   }
+}
+
+@media screen and (max-width: 400px) {
+ 
 }
 
 /** store **/
