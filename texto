@@ -32,3 +32,17 @@ https://www.campuscode.com.br/conteudos/ruby-on-rails-enum
 
 https://blog.saeloun.com/2022/01/05/how-to-use-enums-in-rails
 
+<div>
+  <figure>
+    <a href="https://wa.me/5511982113406?text=Olá%20Atelier%20Cité!" class="a-link contact-link" target="_blank">
+      <button class="cta-button">WHATSAPP</button>
+      <div class="shadow"></div>
+    </a>
+  </figure>
+  <figure>
+    <a href="mailto:andrea@luhz.com.br?subject=Atelier Cité" class="a-link contact-link" target="_blank">
+      <button class="cta-button">E-MAIL</button>
+      <div class="shadow"></div>
+    </a>
+  </figure>
+</div>

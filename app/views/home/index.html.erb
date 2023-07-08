@@ -76,8 +76,7 @@
   <div class="atelier-grid reveal">
     <div class="atelier-description">
       <p class="atelier-title">L'ATELIER</p>
-      <p class="atelier-text">Inaugurado no ano de 1989 na rua Bela Cintra, em São Paulo, o Atelier Cité conta uma colorida história de herança e compartilhamento artístico entre Émile Tuchband, Isabelle Tuchband - pai e filha - e Verena Matzen.</p>
-      <p class="atelier-text">Elemento comum, a fundamentalidade da cor vibra como uma voz na pintura dos artistas. Ora canta, ora se exalta, em composições que compartilham sonhos, experiências, memórias, joie de vivre e espiritualidade.</p>
+      <p class="atelier-text">Inaugurado no ano de 1989 na rua Bela Cintra, em São Paulo,<br>o Atelier Cité conta uma colorida história de compartilhamento<br>e herança artística entre o pintor francês Émile Tuchband,<br>sua filha, a pintora Isabelle Tuchband e Verena Matzen, pintora<br>nascida em Buenos Aires, grande amiga de Isabelle. Elemento comum, a fundamentalidade da cor vibra como uma voz nas pinturas dos artistas. Ora canta, ora se exalta, em composições<br> que compartilham experiências, joie de vivre e espiritualidade.</p>
     </div>
     <div class="atelier-images">
       <div class="slider">
@@ -145,9 +144,7 @@
   <div class="store">
     <div class="store-head reveal">
       <p class="store-title">STORE | LIMITED EDITIONS</p>
-      <button class="store-button">
-	      <span>PURCHASE HAPPINESS</span>
-      </button>
+      <button class="custom-btn btn-12"><span>ART IS LIFE</span><span>PURCHASE JOY</span></button>
     </div>
   <div class="store-grid reveal">
     <% if @products.any? %>
@@ -164,7 +161,7 @@
           <p class="product-description"><%= product.artist.name %> - <%= product.technique %></p>
           <p class="product-description"><%= product.height %> x <%= product.width %> cm - <%= product.year %> - <%= product.edition %></p>
           <p class="product-description reference">referência: <%= product.sku %></p>
-          <a href="#"><p  class="product-link">VER NA LOJA</p></a>
+          <a href="#"><p  class="product-link">ver na loja</p></a>
         </div>
       <% end %>
     <% end %>
