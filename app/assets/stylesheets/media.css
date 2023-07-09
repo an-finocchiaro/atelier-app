@@ -1,5 +1,5 @@
 /**navbar**/
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1050px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float:right;
@@ -145,56 +145,6 @@
   .box-button {
     margin-top: 2.5vw;
   }
-  .btn-12{
-    right: -20%;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  .store-card {
-    max-height: 550px;
-  }
-  .atelier-title {
-    font-size: 7vw;
-    margin-top: 5px;
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .artist-name {
-    font-size: 12vw;
-  }
-  .artist-surname {
-    font-size: 9vw;
-    margin-top: -5vw;
-  }
-  .artist-surname.emile {
-    margin-top: -3vw;
-  }
-  .box-button {
-    margin-top: 2vw;
-  }
-  .atelier-title {
-    font-size: 8vw;
-    margin-top: 0px;
-  }
-  .atelier-text {
-    width: 88%;
-    line-height: 33px;
-    margin-top: 5px;
-  }
-  .slider-img.pele {
-    margin-left: -10px;
-  }
-  .store-card {
-    max-height: 500px;
-  }
-  .product-title {
-    margin-bottom: 0.8%;
-  }
-}
-
-@media screen and (max-width: 1250px) {
   .store-head {
     height: 120px;
   }
@@ -213,15 +163,217 @@
     width: 250px;
     height: 65px;
   }
+  .store-grid {
+    grid-gap: 8% 6%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
-
-
-/*
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
+  .topnav a.nav-link {
+    margin-left: 0px;
+    font-size: 16px;
+    min-width: 70px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .atelier-title {
+    font-size: 7vw;
+    margin-top: 5px;
+  }
 }
+
+@media screen and (max-width: 1300px) {
+  .artist-name {
+    font-size: 12vw;
+  }
+  .artist-surname {
+    font-size: 9vw;
+    margin-top: -5vw;
+  }
+  .artist-surname.emile {
+    margin-top: -4vw;
+  }
+  .box-button {
+    margin-top: 2vw;
+  }
+  .atelier-title {
+    font-size: 8vw;
+    margin-top: 0px;
+  }
+  .atelier-text {
+    width: 88%;
+    line-height: 33px;
+    margin-top: 5px;
+  }
+  .slider-img.pele {
+    margin-left: -10px;
+  }
+  .product-title {
+    margin-bottom: 0.8%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .artist-surname {
+    margin-top: -6vw;
+  }
+  .artist-surname.emile {
+    margin-top: -5vw;
+  }
+  .slider-img.pele {
+    margin-left: -15px;
+  }
+  .contact {
+    font-size: 22px;
+  }
+  .front, .back{
+    font-size: 22px;
+  }
+  .insta-link {
+    font-size: 19px;
+  }
+}
+
 @media screen and (max-width: 800px) {
+  .music-frame {
+    width: 80%;
+  }
+  .box-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    height: 700px;
+    max-height: 700px;
+  }
+  .box-image {
+    height: 450px;
+    max-height: 450px;
+    overflow: hidden;
+  }
+  .photo {
+    min-height: 450px;
+    max-height: 450px;
+  }
+  .box-names {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 250px;
+    max-height: 250px;
+  }
+  .box-name {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .box-surname {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .box-button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .artist-name {
+    font-size: 18vw;
+    margin-top: -4vw;
+    margin-left: 3vw;
+  }
+  .artist-name.emile {
+    margin-top: -1vw;
+    font-size: 15vw;
+  }
+  .artist-surname {
+    font-size: 12vw;
+    margin-top: -8vw;
+    margin-left: 3vw;
+  }
+  .artist-surname.emile {
+    margin-top: -7vw;
+  }
+  @keyframes surname{
+    0% {
+      margin-left: -1200px;
+    }
+    50% {
+      margin-left: 400px;
+    }
+    100% {
+      margin-left: -300px;
+    }
+  }
+  .box-button {
+    margin-left: 18vw;
+    margin-top: -4vw;
+  }
+  .btn span {
+    font-size: 2.2vw;
+    letter-spacing: 1px;
+  }
+  .atelier-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 900px;
+  }
+  .slider-img.pele {
+    margin-left: -5px;
+    width: 105%;
+  }
+  .atelier-title {
+    font-size: 12vw;
+    margin-left: 3vw;
+    margin-top: 2vw;
+  }
+  .atelier-text {
+    width: 82%;
+    text-align: justify;
+    font-size: 2vw;
+    line-height: 43px;
+    margin-left: 10vw;
+    margin-top: 7px;
+  }
+  .store-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5% 8%;
+    padding-top: 8%;
+    padding-bottom: 6%;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .custom-btn {
+    font-size: 3vw;
+  }
+  .product-img-box {
+    max-height: 60%;
+  }
+  .product-title {
+    font-size: 2.2vw;
+    margin-top: 1%;
+  }
+  .product-description {
+    font-size: 1.8vw;
+  }
+  .product-description.reference {
+    margin-top: 0.7%;
+    font-size: 1.4vw;
+  }
+  .product-link {
+    font-size: 2.1vw;
+  }
+  .credit {
+    font-size: 12px;
+  }
+  .btn-12{
+    right: -20%;
+  }
 }
+
 @media screen and (max-width: 480px) {
-}*/
+
+}
 
