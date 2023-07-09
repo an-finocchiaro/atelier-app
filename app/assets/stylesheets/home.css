@@ -70,61 +70,55 @@ select {
 }
 
 /** navbar **/
-/* add a background color to the top navigation */
 .topnav {
   background-color: #FF6EC7;
-  overflow: hidden;
-  height: 75px;
+  overflow:hidden;
 }
 
-/* style the links inside the navigation bar */
 .topnav a {
   display: block;
   float: left;
-  color: whitesmoke;
-  font-family: 'Encode Sans Semi Condensed', sans-serif;
-  font-size: 21px;
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.topnav a.home-link {
-  color: #F4FF00;
-  font-family: 'Anton';
-  font-size: 33px;
-  letter-spacing: 1px;
-  padding-left: 50px;
-  padding-top: 15px;
 }
 
 .topnav a.nav-link {
-  margin-left: 25px;
-}
-
-.topnav a:hover {
-  padding-top: 25px;
+  color: whitesmoke;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  font-size: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 25px;
+  margin-left: 25px;
+}
+.topnav a.nav-link:hover {
   background-color: #00CED1;
 }
 
-/* hide the link that should open and close the topnav on small screens */
+.logo-link {
+  height: 75px;
+}
+.topnav a.logo-link:hover {
+  opacity: 60%;
+}
+.logo-img {
+  height: 60px;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .topnav .icon {
   display: none;
-}
-
-.topnav a.home-link:hover {
-  padding-top: 15px;
-  padding-bottom: 11px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.topnav a.icon:hover {
+  color: whitesmoke;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  font-size: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.topnav a.icon:hover {
+  background-color: #00CED1;
 }
 
 /** music box **/
@@ -239,7 +233,7 @@ select {
 .box-names {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 230px 140px 180px;
+  grid-template-rows: 42% 26% 32%;
   max-height: 550px;
   background-color: rgb(19, 218, 46);
 }
@@ -256,7 +250,7 @@ select {
   color:#4F95DA;
   font-family: 'Anton';
   font-size: 11.5vw;
-  margin-top: -2vw;
+  margin-top: -3vw;
   margin-left: 1vw;
   animation-name: name;
   animation-duration: 3s;
@@ -268,6 +262,7 @@ select {
 .artist-name.emile {
   color: whitesmoke;
   margin-top: -1vw;
+  font-size: 11vw;
 }
 
 .artist-name.verena {
@@ -278,7 +273,7 @@ select {
   color: whitesmoke;
   font-family: 'Anton';
   font-size: 8.5vw;
-  margin-top: -1.5vw;
+  margin-top: -2vw;
   margin-left: 1vw;
   animation-name: surname;
   animation-delay: 2s;
@@ -327,7 +322,7 @@ select {
   z-index: 3;
   font-family: 'Encode Sans Semi Condensed', sans-serif;
   margin-left: 11vw;
-  margin-top: 3.5vw;
+  margin-top: 3vw;
 }
 
 .center {
@@ -387,7 +382,7 @@ svg {
   color: white;
   font-family: 'Encode Sans Semi Condensed', sans-serif;
   font-size: 1.5vw;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -417,7 +412,7 @@ svg {
 .atelier-description {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .atelier-title {
@@ -431,14 +426,14 @@ svg {
 
 .atelier-text {
   color: #211b15;
-  width: 85%;
+  width: 83%;
   font-family: 'Encode Sans Semi Condensed';
   font-size: 1.5vw;
   line-height: 45px;
   letter-spacing: 1px;
   margin-bottom: 15px;
   margin-left: 3vw;
-  margin-top: 1vw;
+  margin-top: -10px;
 }
 
 .atelier-images {
@@ -741,7 +736,7 @@ svg {
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   background-color: #FF1493;
-  height: 180px;
+  height: 120px;
 }
 
 .footer-column {
@@ -756,12 +751,11 @@ svg {
 
 .contact {
   font-family: 'Anton';
-  font-weight: 400;
-  font-size: 5vw;
+  font-size: 30px;
   letter-spacing: 1px;
   color: whitesmoke;
   text-rendering: optimizeLegibility;
-  margin-left: 4.5vw;
+  margin-left: 3vw;
   padding-top: 1%;
 }
 
@@ -771,7 +765,7 @@ svg {
 
 .flip-container {
   perspective: 1000px;
-  height: 90px;
+  height: 60px;
 }
 
 .flipper{
@@ -792,8 +786,7 @@ svg {
 	height: 100%;
   color:whitesmoke;
   font-family: 'Anton';
-  font-weight: 400;
-  font-size: 2.7vw;
+  font-size: 30px;
   letter-spacing: 1px;
   text-rendering: optimizeLegibility;
   backface-visibility: hidden;
@@ -823,25 +816,33 @@ svg {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 60px;
+  height: 40px;
   margin-left: 4%;
 }
 
 .box-instagram-isabelle {
   background-color:#FF4f00;
 }
+.box-instagram-isabelle:hover {
+  background-color: #e2cd0f;
+}
 .box-instagram-verena {
   background-color:#FF1493;
 }
+.box-instagram-verena:hover {
+  background-color: #a1b20a;
+}
 .box-instagram-atelier {
   background-color:#009b77;
+}
+.box-instagram-atelier:hover {
+  background-color: #63acc7;
 }
 
 .insta-link {
   color:whitesmoke;
   font-family: 'Anton';
-  font-weight: 400;
-  font-size: 1.8vw;
+  font-size: 25px;
   letter-spacing: 1px;
   text-rendering: optimizeLegibility;
   padding-top: 1%;
@@ -853,13 +854,14 @@ svg {
   display: flex;
   width: 100%;
   padding-bottom: 20px;
-  justify-content: center;
+  justify-content:center;
+  text-align:right;
 }
 
 .credit {
   padding-top: 15px;
   font-family: 'Encode Sans Semi Condensed';
-  font-size: 1.2vw;
+  font-size: 15px;
   font-weight: 400;
   color: #000000;
 }

@@ -1,285 +1,227 @@
-
-/** medias **/
-@media screen and (max-width: 2000px) {
-  
-}
-
-
-
-
-
 /**navbar**/
-/* when the screen is less than xx pixels wide hide all links except for the first one, show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1150px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
-    float: right;
+    float:right;
     display: block;
-    font-size: 20px;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
   }
   .topnav a.nav-link {
-    margin-left: 0px;
+    margin-left: 0;
+    padding-left: 20px;
   }
-}
-
-/* the "responsive" class is added to the topnav with js when user clicks on the icon */
-@media screen and (max-width: 1150px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+    padding-left: 0;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
   }
   .topnav.responsive a {
-    float: none;
     display: block;
+    float: none;
     text-align: left;
   }
 }
 
-/**music box**/
-@media screen and (max-width: 800px) {
-  .box-player {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+@media screen and (max-width: 1900px) {
+  .artist-surname {
+    margin-top: -3.7vw;
   }
-  .content {
-    height: 90px;
-    margin-left: -10px;
-  }
-  .box-music {
-    padding: 0;
-    margin: 0;
-    height: 100px;
-  }
-  .music-frame {
-    padding-top: 0;
-    margin-top: 8px;
-    min-width: 330px;
-    height: 100px;
-  }
-  .visible {
-    padding: 0 0px;
-    font-weight: 600;
-  }
-  .visible:before {
-    margin-left: -10px;
-    height: 50px;
-    padding: 0;
-    margin: 0;
-    font-size: 40px;
-  }
- 
-  .sound-ul {
-    margin-left: 10px;
-  }
-  .sound-li {
-    margin-left: -10px;
+  .artist-surname.emile {
+    margin-top: -2.6vw;
   }
 }
 
-
-/**artists**/
-@media screen and (max-width: 1150px) {
-  .artist-name {
-    margin-top: -15px;
+@media screen and (max-width: 1800px) {
+  .atelier-grid {
+    height: 450px;
   }
-  .artist-surname {
-    margin-top: -20px;
+  .atelier-description {
+    margin-top: 2px;
   }
-}
-@media screen and (max-width: 800px) {
-  .box-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: 420px 420px;
-    max-height: none;
-    overflow:auto;
-  }
-  .box-names {
-    grid-template-rows: 140px 140px 140px;
-    overflow: auto;
-  }
-  .photo {
-    width: 100%;
-    object-fit: cover;
-    min-height: 420px;
-  }
-  .artist-name {
-    font-size: 23vw;
-    margin-top: -20px;
-    margin-left: 30px;
-  }
-  .artist-name.emile {
-    margin-top: -20px;
-  }
-  .artist-surname {
-    font-size: 15vw;
-    margin-top: 20px;
-    margin-left: 30px;
-  }
-  .box-button {
-    margin-top: 40px;
-    margin-left: 120px;
-  }
-  .btn {
-    width: 200px;
-    height: 70px;
-    cursor: pointer;
-    background: #FF6EC7;
-    border: 1px solid #F4FF00;
-    outline: none;
-    transition: 1s ease-in-out;
-    border-radius: 15px;
-    transform: rotate(0deg);
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .box-grid {
-    grid-template-rows: 420px 330px;
-    max-height: none;
-    overflow:auto;
-  }
-  .box-names {
-    grid-template-rows: 110px 110px 110px;
-  }
-  .artist-surname {
-    font-size: 17vw;
-    margin-top: -10px;
-  }
-  .box-button {
-    margin-top: 10px;
-    margin-left: 70px;
-  }
-  .artist-name {
-    margin-top: -15px;
-  }
-  .artist-name.emile {
-    margin-top: -15px;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .box-grid {
-    grid-template-rows: 350px 300px;
-  }
-  .box-names {
-    grid-template-rows: 100px 100px 100px;
-  }
-  .artist-surname {
-    font-size: 19vw;
+  .atelier-title {
+    font-size: 6.5vw;
     margin-top: -8px;
   }
-  .box-button {
-    margin-top: 10px;
-    margin-left: 70px;
+  .atelier-text {
+    width: 85%;
+    font-size: 1.3vw;
+    line-height: 35px;
   }
-  .artist-name {
-    margin-top: -10px;
+  .atelier-images {
+    height: 450px;
   }
-  .artist-name.emile {
-    margin-top: -10px;
+  .slider {
+    height: 225px;
+    max-height: 225px;
+  }
+  .slider-ul {
+    height: 675px;
+  }
+  .slider li {
+    height: 225px;
+    min-height: 225px;
+  }
+  .slider-img {
+    height: 225px;
+    min-height: 225px;
+  }
+  .newspaper-img {
+    height: 250px;
+  }
+  .btn-12{
+    right: -25%;
+  }
+  
+  @keyframes slider{
+    0% {
+      margin-top: 450px;
+    }
+    24% {
+      margin-top: 450px;
+    }
+    25% {
+      margin-top: 0px;
+    }
+    49% {
+      margin-top: 0px;
+    }
+    50% {
+      margin-top: -450px;
+    }
+    74% {
+      margin-top: -450px;
+    }
+    75% {
+      margin-top: 0px;
+    }
+    99% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 450px;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .artist-surname {
+    margin-top: -5vw;
+  }
+  .artist-surname.emile {
+    margin-top: -4vw;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .topnav a.nav-link {
+    margin-left: 10px;
+    font-size: 19px;
+  }
+  .artist-surname {
+    margin-top: -4vw;
+  }
+  .artist-surname.emile {
+    margin-top: -3vw;
+  }
+  .box-grid {
+    max-height: 450px;
+  }
+  .box-image {
+    max-height: 450px;
   }
   .photo {
-    min-height: 350px;
-    z-index: -2;
+    min-height: 450px;
   }
-  .btn {
-    width: 180px;
+  .box-names {
+    grid-template-rows: 190px 115px 145px;
+    max-height: 450px;
   }
-  .atelier-title {
-    font-size: 20vw;
+  .box-button {
+    margin-top: 2.5vw;
   }
-  .atelier-title {
-    font-size: 8vw;
-  }
-}
-
-/* atelier section */
-@media screen and (max-width: 1000px) {
-  .atelier-grid {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-  .atelier-title {
-    font-size: 10vw;
+  .btn-12{
+    right: -20%;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1400px) {
+  .store-card {
+    max-height: 550px;
+  }
   .atelier-title {
+    font-size: 7vw;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .artist-name {
     font-size: 12vw;
   }
+  .artist-surname {
+    font-size: 9vw;
+    margin-top: -5vw;
+  }
+  .artist-surname.emile {
+    margin-top: -3vw;
+  }
+  .box-button {
+    margin-top: 2vw;
+  }
   .atelier-title {
-    margin-left: 20px;
+    font-size: 8vw;
+    margin-top: 0px;
   }
   .atelier-text {
-    margin-left: 20px;
+    width: 88%;
+    line-height: 33px;
+    margin-top: 5px;
   }
-}
-
-@media screen and (max-width: 400px) {
- 
-}
-
-/** store **/
-@media screen and (max-width: 1100px) {
-  .store-button {
-    margin-left: 170px;
+  .slider-img.pele {
+    margin-left: -10px;
   }
-  .store-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .store-button {
-    margin-left: 170px;
-  }
-  .store-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .store-head {
-    grid-template-columns: 1fr;
-    grid-template-rows: 2fr;
-    height: 220px;
-    text-align: center;
-  }
-  .store-title {
-    font-size: 55px;
-  }
-  .store-button {
-    margin-left:30%;
-    width: 290px;
-    height: 75px;
-    font-size: 23px;
-    margin-bottom: 25px;
+  .store-card {
+    max-height: 500px;
   }
   .product-title {
-    font-size: 25px;
-  }
-  .product-description {
-    font-size: 22px;
-  }
-  .product-description.reference {
-    font-size: 17px;
-  }
-  .product-link {
-    font-size: 20px;
-    font-weight: 600;
+    margin-bottom: 0.8%;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .store-title {
-    font-size: 8vw;
+@media screen and (max-width: 1250px) {
+  .store-head {
+    height: 120px;
   }
-  .store-button {
-    margin-left:25%;
+  .custom-btn {
+    width: 250px;
+    height: 65px;
+    font-size: 1.9vw;
   }
-  .store-button {
-    width: 240px;
-    height: 60px;
-    font-size: 17px;
+  .btn-12{
+    right: -25%;
+    width: 250px;
+    height: 65px;
+    line-height: 65px;
+  }
+  .btn-12 span {
+    width: 250px;
+    height: 65px;
   }
 }
+
+
+
+/*
+@media screen and (max-width: 1000px) {
+}
+@media screen and (max-width: 800px) {
+}
+@media screen and (max-width: 480px) {
+}*/
+
