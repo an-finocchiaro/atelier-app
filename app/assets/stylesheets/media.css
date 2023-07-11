@@ -1,32 +1,3 @@
-/**navbar**/
-@media screen and (max-width: 1050px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float:right;
-    display: block;
-    font-size: 30px;
-    text-align: center;
-    padding: 20px;
-  }
-  .topnav a.nav-link {
-    margin-left: 0;
-    padding-left: 20px;
-  }
-  .topnav.responsive {
-    position: relative;
-    padding-left: 0;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    display: block;
-    float: none;
-    text-align: left;
-  }
-}
 
 @media screen and (max-width: 1900px) {
   .artist-surname {
@@ -41,17 +12,10 @@
   .atelier-grid {
     height: 450px;
   }
-  .atelier-description {
-    margin-top: 2px;
-  }
-  .atelier-title {
-    font-size: 6.5vw;
-    margin-top: -8px;
-  }
   .atelier-text {
-    width: 85%;
-    font-size: 1.3vw;
-    line-height: 35px;
+    font-size: 1.35rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
   }
   .atelier-images {
     height: 450px;
@@ -74,7 +38,7 @@
   .newspaper-img {
     height: 250px;
   }
-  .btn-12{
+  .btn-art{
     right: -25%;
   }
   
@@ -116,6 +80,9 @@
   .artist-surname.emile {
     margin-top: -4vw;
   }
+  .atelier-text {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -148,39 +115,43 @@
   .store-head {
     height: 120px;
   }
-  .custom-btn {
-    width: 250px;
-    height: 65px;
-    font-size: 1.9vw;
+  .store-btn {
+    width: 240px;
+    height: 55px;
+    font-size: 1.5vw;
   }
-  .btn-12{
+  .btn-art{
     right: -25%;
-    width: 250px;
-    height: 65px;
-    line-height: 65px;
+    width: 240px;
+    height: 55px;
+    line-height: 55px;
   }
-  .btn-12 span {
-    width: 250px;
-    height: 65px;
+  .btn-art span {
+    width: 240px;
+    height: 55px;
+    line-height: 55px;
   }
   .store-grid {
     grid-gap: 8% 6%;
     padding-left: 10%;
     padding-right: 10%;
   }
+  .store-card {
+    max-height: 450px;
+  }
 }
 
 @media screen and (max-width: 1400px) {
   .topnav a.nav-link {
-    margin-left: 0px;
+    margin-left: 5px;
     font-size: 16px;
     min-width: 70px;
     padding-left: 12px;
     padding-right: 12px;
   }
-  .atelier-title {
-    font-size: 7vw;
-    margin-top: 5px;
+  .atelier-text {
+    font-size: 1.05rem;
+    line-height: 180%;
   }
 }
 
@@ -198,18 +169,6 @@
   .box-button {
     margin-top: 2vw;
   }
-  .atelier-title {
-    font-size: 8vw;
-    margin-top: 0px;
-  }
-  .atelier-text {
-    width: 88%;
-    line-height: 33px;
-    margin-top: 5px;
-  }
-  .slider-img.pele {
-    margin-left: -10px;
-  }
   .product-title {
     margin-bottom: 0.8%;
   }
@@ -222,9 +181,6 @@
   .artist-surname.emile {
     margin-top: -5vw;
   }
-  .slider-img.pele {
-    margin-left: -15px;
-  }
   .contact {
     font-size: 22px;
   }
@@ -234,6 +190,48 @@
   .insta-link {
     font-size: 19px;
   }
+  .atelier-text {
+    line-height: 150%;
+  }
+  .slider-img.pele {
+    min-width: 100%;
+    max-width: 110%;
+    margin-left: -18px;
+   }
+}
+
+/**navbar**/
+@media screen and (max-width: 1050px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float:right;
+    display: block;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+  }
+  .topnav a.nav-link {
+    margin-left: 0;
+    padding-left: 20px;
+  }
+  .topnav.responsive {
+    position: relative;
+    padding-left: 0;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    display: block;
+    float: none;
+    text-align: left;
+  }
+  .slider-img.pele {
+    max-width: 118%;
+    margin-left: -30px;
+   }
 }
 
 @media screen and (max-width: 800px) {
@@ -320,10 +318,6 @@
     grid-template-rows: 1fr 1fr;
     height: 900px;
   }
-  .slider-img.pele {
-    margin-left: -5px;
-    width: 105%;
-  }
   .atelier-title {
     font-size: 12vw;
     margin-left: 3vw;
@@ -331,7 +325,6 @@
   }
   .atelier-text {
     width: 82%;
-    text-align: justify;
     font-size: 2vw;
     line-height: 43px;
     margin-left: 10vw;
@@ -345,8 +338,11 @@
     padding-left: 6%;
     padding-right: 6%;
   }
-  .custom-btn {
+  .store-btn {
     font-size: 3vw;
+  }
+  .btn-art{
+    right: -20%;
   }
   .product-img-box {
     max-height: 60%;
@@ -368,12 +364,257 @@
   .credit {
     font-size: 12px;
   }
-  .btn-12{
-    right: -20%;
-  }
 }
 
-@media screen and (max-width: 480px) {
-
+@media screen and (max-width: 500px) {
+  .topnav a.nav-link {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    min-width: none;
+  }
+  .topnav a.nav-link:hover {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    margin-left: 0;
+  }
+  .logo-img {
+    height: 50px;
+    margin-top: 15px;
+    padding-left:10px;
+  }
+  .box-player {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .content {
+    height: 90px;
+    line-height: 30px;
+    font-size: 29px;
+    margin-left: -10%;
+  }
+  .visible {
+    height: 30px;
+  }
+  .visible:before {
+    height: 330px;
+    overflow: hidden;
+  }
+  .visible:after {
+    margin-left: 50%;
+    margin-top: -150px;
+    height: 33px;
+    overflow: hidden;
+  }
+  .sound-ul {
+    padding-left: 60px;
+  }
+  .box-music {
+    height: 100px;
+    align-items:flex-start;
+    padding-bottom: 10px;
+  }
+  @keyframes change {
+    0%, 12%, 100% {
+      transform: translateY(-33px);
+    }
+    17%,29% {
+      transform: translateY(-63px);
+    }
+    34%,46% {
+      transform: translateY(-93px);
+    }
+    51%,63% {
+      transform: translateY(-123px);
+    }
+    68%,80% {
+      transform: translateY(-93px);
+    }
+    85%,97% {
+      transform: translateY(-63px);
+    }
+  }
+  .box-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    height: 700px;
+    max-height: 700px;
+  }
+  .box-image {
+    height: 400px;
+    max-height: 400px;
+    overflow: hidden;
+  }
+  .photo {
+    min-height: 400px;
+    max-height: 400px;
+  }
+  .box-names {
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px 90px 80px;
+    height: 300px;
+    max-height: 300px;
+  }
+  .box-name {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .box-surname {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .box-button {
+    margin-left: 55%;
+    margin-top: -2%;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .artist-name {
+    font-size: 23vw;
+    margin-left: 5vw;
+    margin-top: -25px;
+  }
+  .artist-name.emile {
+    margin-top: -17px;
+    font-size: 21vw;
+  }
+  .artist-surname {
+    font-size: 17vw;
+    margin-top: -38px;
+    margin-left: 5vw;
+  }
+  .artist-surname.emile {
+    margin-top: -8vw;
+  }
+  .btn span {
+    font-size: 3vw;
+  }
+  .atelier-grid {
+    height: 1100px;
+  }
+  .atelier-description {
+    height: 500px;
+  }
+  .atelier-title {
+    font-size: 15vw;
+    margin-left: 5vw;
+    margin-top: 10px;
+  }
+  .atelier-text {
+    width: 80%;
+    font-size: 4vw;
+    line-height: 25px;
+    margin-bottom:2%;
+    margin-left: 10vw;
+    margin-right: 5vw;
+    margin-top: 10px;
+  }
+  .atelier-images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 600px;
+    max-height: 600px;
+  }
+  .slider {
+    height: 200px;
+    max-height: 200px;
+  }
+  .slider-ul {
+    height: 600px;
+    animation-delay: 1s;
+    animation-duration: 30s;
+    transition: 1s;
+  }
+  .slider-ul.slider-dois {
+    animation-delay: 3s;
+    animation-duration: 30s;
+  }
+  .slider-ul.slider-tres {
+    animation-delay: 5s;
+    animation-duration: 30s;
+  }
+  .slider li {
+    height: 200px;
+    min-height: 200px;
+  }
+  .slider-img {
+    height: 200px;
+    min-height: 200px;
+    object-fit: cover;
+    min-width: 100%;
+  }
+  .newspaper-img {
+    height: 220px;
+  }
+  @keyframes slider{
+    0% {
+      margin-top: 400px;
+    }
+    24% {
+      margin-top: 400px;
+    }
+    25% {
+      margin-top: 0px;
+    }
+    49% {
+      margin-top: 0px;
+    }
+    50% {
+      margin-top: -400px;
+    }
+    74% {
+      margin-top: -400px;
+    }
+    75% {
+      margin-top: 0px;
+    }
+    99% {
+      margin-top: 0px;
+    }
+    100% {
+      margin-top: 400px;
+    }
+  }
+  .store-head {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 140px;
+  }
+  .store-title {
+    margin-left: 7vw;
+    margin-top: 5%;
+    width: 80%;
+    font-size: 8.6vw;
+  }
+  .store-btn {
+    width: 180px;
+    height: 60px;
+    font-size: 6vw;
+  }
+  .btn-art{
+    right: -14%;
+    bottom: 10%;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .btn-art span {
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    box-shadow:none;
+  }
+  .btn-art span:nth-child(1) {
+    display:none;
+  }
 }
 

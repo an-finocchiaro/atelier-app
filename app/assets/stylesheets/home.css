@@ -332,13 +332,13 @@ select {
 
 .center {
   position: absolute;
-  width: 180px;
-  height: 80px;
+  width: 220px;
+  height: 90px;
 }
 
 .btn {
-  width: 180px;
-  height: 80px;
+  width: 220px;
+  height: 90px;
   cursor: pointer;
   background: #FF6EC7;
   border: 1px solid #F4FF00;
@@ -355,6 +355,8 @@ select {
 }
 
 svg {
+  width: 220px;
+  height: 90px;
   position: absolute;
   left: 0;
   top: 0;
@@ -387,9 +389,8 @@ svg {
 .btn span {
   color: white;
   font-family: 'Encode Sans Semi Condensed', sans-serif;
-  font-size: 1.5vw;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 1.4rem;
+  letter-spacing: 5px;
 }
 
 /* div fade in */
@@ -417,29 +418,19 @@ svg {
 
 .atelier-description {
   display: flex;
-  flex-direction: column;
-  margin-top: 5px;
-}
-
-.atelier-title {
-  color: #FF5C5A;
-  font-family: 'Anton';
-  font-weight: 600;
-  font-size: 6vw;
-  letter-spacing: 1px;
-  margin-left: 3vw;
+  align-items: center;
+  justify-content: center;
 }
 
 .atelier-text {
   color: #211b15;
-  width: 83%;
+  width: 85%;
   font-family: 'Encode Sans Semi Condensed';
-  font-size: 1.5vw;
-  line-height: 45px;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  margin-left: 3vw;
-  margin-top: -10px;
+  font-size: 1.7rem;
+  line-height: 150%;
+  text-align: justify;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 .atelier-images {
@@ -499,11 +490,14 @@ svg {
 }
 
 .newspaper-img {
-  height: 333px;
+  height: 110%;
 }
 .isavaso-img {
   width: 120%;
   margin-left: -18px;
+}
+.slider-img.pele {
+ max-width: 100%;
 }
 
 @keyframes slider{
@@ -547,16 +541,16 @@ svg {
 }
 
 /* button */
-.custom-btn {
+.store-btn {
   position: relative;
   display: inline-block;
   width: 350px;
   height: 75px;
   color: whitesmoke;
   background: transparent;
-  font-family: 'Cabin Sketch';
-  font-weight: 700;
-  font-size: 1.9vw;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
   border-radius:5px;
@@ -566,7 +560,7 @@ svg {
    4px 4px 5px 0px rgb(82, 3, 82);
   outline: none;
 }
-.btn-12{
+.btn-art{
   position: relative;
   right: -30%;
   bottom: 25%;
@@ -578,9 +572,9 @@ svg {
   -webkit-perspective: 230px;
   perspective: 230px;
 }
-.btn-12 span {
+.btn-art span {
   background: #ff1493;
-  background: linear-gradient(-180deg, #FF89D6 0%, #FF1493 70%);
+  background: linear-gradient(180deg, #FF89D6 0%, #FF1493 70%);
   display: block;
   position: absolute;
   width: 350px;
@@ -596,7 +590,7 @@ svg {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-.btn-12 span:nth-child(1) {
+.btn-art span:nth-child(1) {
   box-shadow:
     3px 3px 20px 0px #fff9,
     3px 3px 5px 0px #fff9,
@@ -605,19 +599,19 @@ svg {
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
   transform: rotateX(90deg);
-  -webkit-transform-origin: 50% 50% -35px;
-  -moz-transform-origin: 50% 50% -35px;
-  transform-origin: 50% 50% -35px;
+  -webkit-transform-origin: 50% 50% -29px;
+  -moz-transform-origin: 50% 50% -29px;
+  transform-origin: 50% 50% -29px;
 }
-.btn-12 span:nth-child(2) {
+.btn-art span:nth-child(2) {
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
-  -webkit-transform-origin: 50% 50% -35px;
-  -moz-transform-origin: 50% 50% -35px;
-  transform-origin: 50% 50% -35px;
+  -webkit-transform-origin: 50% 50% -27px;
+  -moz-transform-origin: 50% 50% -27px;
+  transform-origin: 50% 50% -27px;
 }
-.btn-12:hover span:nth-child(1) {
+.btn-art:hover span:nth-child(1) {
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -625,7 +619,7 @@ svg {
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
-.btn-12:hover span:nth-child(2) {
+.btn-art:hover span:nth-child(2) {
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -667,7 +661,7 @@ svg {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  max-height: 440px;
+  max-height: 600px;
   background-color: white;
   color: #211b15;
   font-family: 'Encode Sans Semi Condensed';
@@ -706,7 +700,7 @@ svg {
 
 .product-description.reference {
   margin-top: 1%;
-  font-size: 0.7vw;
+  font-size: 0.8vw;
   color: #808080;
 }
 
@@ -804,18 +798,18 @@ svg {
 }
 
 .front {
-  background-color: #009b77;
+  background-color: #FF4f00;
 }
 .front.email {
-  background-color: #FF4f00;
+  background-color: #009b77;
 }
 
 .back{
 	transform: rotateY(180deg);
-  background-color: #FF5C5A;
+  background-color: #91d400;
 }
 .back.email {
-  background-color: #91d400;
+  background-color: #ff5c5a;
 }
 .contact-link {
   margin-left: 3vw;
