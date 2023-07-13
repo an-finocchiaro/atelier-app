@@ -14,9 +14,8 @@
     <p class="canva-show-description">R$ <%= @canva.price %></p>
   <% end %>
 </div>
-
-<div class="buttons-grid">
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
+  <div class="buttons-grid form-admin">
     <% if @canva.available? %>
       <%= button_to 'Acervo', collection_canva_path(@canva.id), class:"form-button" %>
       <%= button_to 'Vendida', sold_canva_path(@canva.id), class:"form-button" %>
@@ -35,6 +34,6 @@
     <% if @canva.exhibit? %>
       <%= button_to 'Não Exibir', hide_canva_path(@canva.id), class:"form-button" %>
     <% end %>
-    <%= link_to 'Editar', edit_canva_path(@canva.id), class: "form-button" %>
-  <% end %>
-</div>
+    <%= link_to 'Editar', edit_canva_path(@canva.id), class: "edit-button" %>
+  </div>
+<% end %>

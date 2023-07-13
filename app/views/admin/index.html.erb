@@ -22,6 +22,6 @@
       <h4>ARTISTA</h4><br>
       <%= link_to 'Cadastrar artista', new_artist_path %>
     </div><br><br>
-    <%= button_to 'Sair', destroy_user_session_path, data: { turbo_method: :delete }, class: "form-button" %>
+    <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: "form-button" %>
   </div>
 <% end %>

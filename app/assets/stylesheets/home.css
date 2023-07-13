@@ -6,7 +6,6 @@
 
 body {
   background-color: #F4FF00;
-  padding-bottom: 15px;
 }
 
 a {
@@ -48,8 +47,21 @@ select {
   padding: 10px;
   cursor: pointer;
   border-radius: 8px;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 110px;
+}
+
+.edit-button {
+  width: 110px;
+  height: 40px;
+  background-color: #e81a4c;
+  color: white;
+  padding: 10px 35px 10px 35px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+
 }
 
 .form-input {
@@ -126,6 +138,10 @@ select {
   font-size: 0.9rem;
   margin-left: 7%;
   font-weight: 700;
+}
+
+.canva-img {
+  max-height: 300px;
 }
 
 /** navbar **/
