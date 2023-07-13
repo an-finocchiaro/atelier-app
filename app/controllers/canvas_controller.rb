@@ -1,12 +1,12 @@
 class CanvasController < ApplicationController
-  before_action :set_canva, only: %i[show available collection sold hide exhibit update edit]
+  before_action :set_canva, only: %i[show available collection sold hide exhibit edit update]
+  before_action :canva_params, only: %i[create update]
   def new
     @canva = Canva.new
     @artists = Artist.all
   end
 
   def create
-    canva_params = params.require(:canva).permit(:artist_id, :code, :collection_name, :title, :technique, :height, :width, :year, :frame, :price, :image)
     @canva = Canva.new(canva_params)
     @canvas = Canva.all
     if @canva.save
@@ -22,8 +22,21 @@ class CanvasController < ApplicationController
   end
 
   def show
-    @canva = Canva.find(params[:id])
     @artist = Artist.find(@canva.artist_id)
+  end
+
+  def edit
+    @artists = Artist.all
+  end
+
+  def update
+    @canva = Canva.find(params[:id])
+    if @canva.update(canva_params)
+      redirect_to @canva, notice: 'Alteração efetuada com sucesso'
+    else
+      flash.now[:alert] = 'Não foi possível realizar a alteração'
+      render 'edit'
+    end
   end
 
   def available
@@ -55,6 +68,10 @@ class CanvasController < ApplicationController
 
   def set_canva
     @canva = Canva.find(params[:id])
+  end
+
+  def canva_params
+    params.require(:canva).permit(:artist_id, :code, :collection_name, :title, :technique, :height, :width, :year, :frame, :price, :image)
   end
 
 end

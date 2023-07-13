@@ -1,40 +1,40 @@
- <% if user_signed_in? %>
-  <h2><%= @artist.name %></h2>
-  <div>
-    <% if @canva.image.attached? %>
-      <%= link_to image_tag(@canva.image, style:"width:500px; height:500px"), @canva.image, :target => '_blank' %>
-    <% end %>
-  </div>
+<div>
+  <% if @canva.image.attached? %>
+    <%= link_to image_tag(@canva.image, class:"canva-img"), @canva.image, target:'_blank' %>
+  <% end %>
+</div>
 
-  <div>
-    <p><%= @canva.title %></p>
-    <p><%= @canva.technique %></p>
-    <p><%= @canva.height %> x <%= @canva.width %> cm</p>
-    <p><%= @canva.year %></p>
-    <p>referência: <%= @canva.code %></p>
-    <p>coleção: <%= @canva.collection_name %></p>
-  </div>
-<% end %>
+<div>
+  <p class="canva-show-title"><%= @canva.title %></p>
+  <p class="canva-show-description"><%= @canva.technique %></p>
+  <p class="canva-show-description"><%= @canva.height %> x <%= @canva.width %> cm</p>
+  <p class="canva-show-description"><%= @canva.year %></p>
+  <p class="canva-show-reference">referência: <%= @canva.code %></p>
+  <% if user_signed_in? %>
+    <p class="canva-show-description">R$ <%= @canva.price %></p>
+  <% end %>
+</div>
 
- <div>
+<div class="buttons-grid">
   <% if user_signed_in? %>
     <% if @canva.available? %>
-      <%= button_to 'Acervo', collection_canva_path(@canva.id) %>
-      <%= button_to 'Vendida', sold_canva_path(@canva.id) %>
+      <%= button_to 'Acervo', collection_canva_path(@canva.id), class:"form-button" %>
+      <%= button_to 'Vendida', sold_canva_path(@canva.id), class:"form-button" %>
     <% end %>
     <% if @canva.collection? %>
-      <%= button_to 'Disponível', available_canva_path(@canva.id) %>
-      <%= button_to 'Vendida', sold_canva_path(@canva.id) %>
+      <%= button_to 'Disponível', available_canva_path(@canva.id), class:"form-button" %>
+      <%= button_to 'Vendida', sold_canva_path(@canva.id), class:"form-button" %>
     <% end %>
     <% if @canva.sold? %>
-      <%= button_to 'Disponível', available_canva_path(@canva.id) %>
-      <%= button_to 'Acervo', collection_canva_path(@canva.id) %>
+      <%= button_to 'Disponível', available_canva_path(@canva.id), class:"form-button" %>
+      <%= button_to 'Acervo', collection_canva_path(@canva.id), class:"form-button" %>
     <% end %>
     <% if @canva.hide? %>
-      <%= button_to 'Mostrar', exhibit_canva_path(@canva.id) %>
+      <%= button_to 'Mostrar', exhibit_canva_path(@canva.id), class:"form-button" %>
     <% end %>
     <% if @canva.exhibit? %>
-      <%= button_to 'Não Exibir', hide_canva_path(@canva.id) %>
+      <%= button_to 'Não Exibir', hide_canva_path(@canva.id), class:"form-button" %>
     <% end %>
+    <%= link_to 'Editar', edit_canva_path(@canva.id), class: "form-button" %>
   <% end %>
- </div>
+</div>

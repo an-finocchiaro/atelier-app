@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :artists, only: [:new, :create, :index, :show] 
 
-  resources :canvas, only: [:new, :create, :index, :show] do
+  resources :canvas, only: [:new, :create, :index, :show, :edit, :update] do
     post 'available', on: :member
     post 'collection', on: :member
     post 'sold', on: :member
