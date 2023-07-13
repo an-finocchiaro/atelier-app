@@ -10,7 +10,7 @@ class CanvasController < ApplicationController
     @canva = Canva.new(canva_params)
     @canvas = Canva.all
     if @canva.save
-      redirect_to @canva, notice: 'Tela cadastrada com sucesso'
+      redirect_to '/admin', notice: 'Tela cadastrada com sucesso'
     else
       flash.now[:alert] = 'Não foi possível realizar o cadastro'
       render :new

@@ -1,31 +1,33 @@
-<nav>
-  <div class="topnav" id="myTopnav">
-    <a href="#home" class="logo-link">
-      <img src="/assets/index/logocite.jpeg" alt="logotipo Atelier Cité" class="logo-img">
-    </a>
-    <a href="#" class="nav-link">ISABELLE TUCHBAND</a>
-    <a href="#" class="nav-link">ÉMILE TUCHBAND</a>
-    <a href="#" class="nav-link">VERENA MATZEN</a>
-    <a href="#" class="nav-link">À LA UNE</a>
-    <a href="#" class="nav-link">LOJA | EDIÇÕES LIMITADAS</a>
-    <a href="#" class="nav-link">CONTATO</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</nav>
-<div class="box-player">
-  <div class='content'>
-    <div class='visible'>
-      <ul class="sound-ul">
-        <li class="sound-li">sound on</li>
-        <li class="sound-li">party time</li>
-        <li class="sound-li">sound on</li>
-        <li class="sound-li">welcome</li>
-      </ul>
+<% if not user_signed_in? %>  
+  <nav>
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="logo-link">
+        <img src="/assets/index/logocite.jpeg" alt="logotipo Atelier Cité" class="logo-img">
+      </a>
+      <a href="#" class="nav-link">ISABELLE TUCHBAND</a>
+      <a href="#" class="nav-link">ÉMILE TUCHBAND</a>
+      <a href="#" class="nav-link">VERENA MATZEN</a>
+      <a href="#" class="nav-link">À LA UNE</a>
+      <a href="#" class="nav-link">LOJA | EDIÇÕES LIMITADAS</a>
+      <a href="#" class="nav-link">CONTATO</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </nav>
+  <div class="box-player">
+    <div class='content'>
+      <div class='visible'>
+        <ul class="sound-ul">
+          <li class="sound-li">sound on</li>
+          <li class="sound-li">party time</li>
+          <li class="sound-li">sound on</li>
+          <li class="sound-li">welcome</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box-music">
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/38GAGvXt4wMNFsOVZhpG3w?utm_source=generator&theme=0" width="70%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" class="music-frame"></iframe>
     </div>
   </div>
-  <div class="box-music">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/38GAGvXt4wMNFsOVZhpG3w?utm_source=generator&theme=0" width="70%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" class="music-frame"></iframe>
-  </div>
-</div>
+<% end %>

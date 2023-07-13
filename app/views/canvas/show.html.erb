@@ -1,18 +1,20 @@
- <h2><%= @artist.name %></h2>
- <div>
-  <% if @canva.image.attached? %>
-    <%= link_to image_tag(@canva.image, style:"width:500px; height:500px"), @canva.image, :target => '_blank' %>
-  <% end %>
- </div>
+ <% if user_signed_in? %>
+  <h2><%= @artist.name %></h2>
+  <div>
+    <% if @canva.image.attached? %>
+      <%= link_to image_tag(@canva.image, style:"width:500px; height:500px"), @canva.image, :target => '_blank' %>
+    <% end %>
+  </div>
 
- <div>
-  <p><%= @canva.title %></p>
-  <p><%= @canva.technique %></p>
-  <p><%= @canva.height %> x <%= @canva.width %> cm</p>
-  <p><%= @canva.year %></p>
-  <p>referência: <%= @canva.code %></p>
-  <p>coleção: <%= @canva.collection_name %></p>
- </div>
+  <div>
+    <p><%= @canva.title %></p>
+    <p><%= @canva.technique %></p>
+    <p><%= @canva.height %> x <%= @canva.width %> cm</p>
+    <p><%= @canva.year %></p>
+    <p>referência: <%= @canva.code %></p>
+    <p>coleção: <%= @canva.collection_name %></p>
+  </div>
+<% end %>
 
  <div>
   <% if user_signed_in? %>

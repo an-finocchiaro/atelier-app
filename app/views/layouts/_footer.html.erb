@@ -1,52 +1,54 @@
-<div class="footer-box">
-  <div class="footer-column">
-    <div>
-      <p class="contact">CONTATO</p>
-    </div>
-    <div>
-      <div class="flip-container">
-        <div class="flipper">
-          <div class="front whatsapp">
-            <a href="https://wa.me/5511982113406?text=Olá%20Atelier%20Cité!" target="_blank"><p class="contact-link">WHATSAPP</p></a>
+<% if not user_signed_in? %>  
+  <div class="footer-box">
+    <div class="footer-column">
+      <div>
+        <p class="contact">CONTATO</p>
+      </div>
+      <div>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front whatsapp">
+              <a href="https://wa.me/5511982113406?text=Olá%20Atelier%20Cité!" target="_blank"><p class="contact-link">WHATSAPP</p></a>
+            </div>
+            <div class="back whatsapp">
+              <a href="https://wa.me/5511982113406?text=Olá%20Atelier%20Cité!" target="_blank"><p class="contact-link">ENVIAR MENSAGEM</p></a>
+            </div>
           </div>
-          <div class="back whatsapp">
-            <a href="https://wa.me/5511982113406?text=Olá%20Atelier%20Cité!" target="_blank"><p class="contact-link">ENVIAR MENSAGEM</p></a>
+        </div>
+        <div class="flip-container">
+          <div class="flipper">
+            <div class="front email">
+              <a href="mailto:andrea@luhz.com.br?subject=Atelier Cité" target="_blank"><p class="contact-link">EMAIL</p></a>
+            </div>
+            <div class="back email">
+              <a href="mailto:andrea@luhz.com.br?subject=Atelier Cité" target="_blank"><p class="contact-link">ENVIAR EMAIL</p></a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="flip-container">
-        <div class="flipper">
-          <div class="front email">
-            <a href="mailto:andrea@luhz.com.br?subject=Atelier Cité" target="_blank"><p class="contact-link">EMAIL</p></a>
-          </div>
-          <div class="back email">
-            <a href="mailto:andrea@luhz.com.br?subject=Atelier Cité" target="_blank"><p class="contact-link">ENVIAR EMAIL</p></a>
-          </div>
+    </div>
+    <div class="footer-column instagram">
+      <div>
+        <p class="contact contact-insta">INSTAGRAM</p>
+      </div>
+      <div>
+        <div class="box-instagram box-instagram-isabelle">
+          <a href="https://www.instagram.com/isabelletuchband" target="_blank">
+          <p class="insta-link">ISABELLE TUCHBAND</p></a>
+        </div>
+        <div class="box-instagram box-instagram-verena">
+          <a href="https://www.instagram.com/verenamatzen" target="_blank">
+          <p class="insta-link">VERENA MATZEN</p></a>
+        </div>
+        <div class="box-instagram box-instagram-atelier">
+          <a href="https://www.instagram.com/ateliercite" target="_blank">
+          <p class="insta-link">ATELIER CITÉ</p></a>
         </div>
       </div>
     </div>
   </div>
-  <div class="footer-column instagram">
-    <div>
-      <p class="contact contact-insta">INSTAGRAM</p>
-    </div>
-    <div>
-      <div class="box-instagram box-instagram-isabelle">
-        <a href="https://www.instagram.com/isabelletuchband" target="_blank">
-        <p class="insta-link">ISABELLE TUCHBAND</p></a>
-      </div>
-      <div class="box-instagram box-instagram-verena">
-        <a href="https://www.instagram.com/verenamatzen" target="_blank">
-        <p class="insta-link">VERENA MATZEN</p></a>
-      </div>
-      <div class="box-instagram box-instagram-atelier">
-        <a href="https://www.instagram.com/ateliercite" target="_blank">
-        <p class="insta-link">ATELIER CITÉ</p></a>
-      </div>
-    </div>
+  <div class="credits">
+    <p class="credit">all rights reserved 2023 © Atelier Cité - webdesign.</p>
+    <a href="mailto:andrea@luhz.com.br?subject=webdesign Cité" class="a-link footer-link credit">luhz</a>
   </div>
-</div>
-<div class="credits">
-  <p class="credit">all rights reserved 2023 © Atelier Cité - webdesign.</p>
-  <a href="mailto:andrea@luhz.com.br?subject=webdesign Cité" class="a-link footer-link credit">luhz</a>
-</div>
+<% end %>

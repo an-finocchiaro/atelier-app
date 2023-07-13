@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+  <h2 class="artist-name-admin"><%= @artist.name %></h2><br><br>
+  <div class="canvas-grid-admin">
+    <% if @canvas.any? %>
+      <% @canvas.each do |canva| %>
+        <div class="canvas-card-admin">
+          <div class="img-box-admin">
+            <% if canva.image.attached? %>
+              <%= link_to image_tag(canva.image, class: "canvas-img-admin"), canva.image, :target => '_blank' %>
+            <% else %>
+              <p>Imagem indisponível</p>
+            <% end %>
+          </div>
+          <p class="title-adm"><%= link_to canva.title, canva_path(canva.id) %></p>
+          <p class="desc-adm"><%= canva.height %> x <%= canva.width %> cm</p>
+          <p class="desc-adm"><%= canva.technique %> - <%= canva.year %></p>
+          <p class="desc-adm"> <%= canva.frame %> - código: <%= canva.code %></p>
+          <p class="desc-adm">R$ <%= canva.price %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

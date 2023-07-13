@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   get '/admin', to: 'admin#index'
+  get '/admin/telas', to: 'admin#show'
   get '/isabelle-tuchband', to: 'artists#isabelle'
   get '/emile-tuchband',  to: 'artists#emile'
   get '/verena-matzen',  to: 'artists#verena'

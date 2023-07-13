@@ -1,26 +1,27 @@
-<div class="form-admin">
  <% if user_signed_in? %>
-    <div>
+  <div class="form-admin">
+    <div><br><br>
       <p>Usuário: <%= current_user.name %>  |  <%= current_user.email %></p>
     </div>
     <br><br>
     <div>
-      <%= link_to 'Cadastrar artista', new_artist_path %>
+      <h4>TELAS</h4><br>
+      <p>Ver telas:</p><br>
+      <%= link_to 'Isabelle Tuchband -', '/admin/telas?param=1' %>
+      <%= link_to 'Émile Tuchband -',  '/admin/telas?param=2' %>
+      <%= link_to 'Verena Matzen',  '/admin/telas?param=3' %>
     </div><br>
     <div>
       <%= link_to 'Cadastrar tela', new_canva_path %>
     </div><br>
     <div>
+      <h4>PRODUTOS LOJA</h4><br>
       <%= link_to 'Cadastrar produto loja', new_product_path %>
     </div><br>
-    
     <div>
-      <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: "form-button" %>
-    </div><br>
-    <div class="form-admin">
-      <% if user_signed_in? %>
-        <%= link_to 'logout', destroy_user_session_path, data: { turbo_method: :delete }, class: "form-admin logout" %>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+      <h4>ARTISTA</h4><br>
+      <%= link_to 'Cadastrar artista', new_artist_path %>
+    </div><br><br>
+    <%= button_to 'Sair', destroy_user_session_path, data: { turbo_method: :delete }, class: "form-button" %>
+  </div>
+<% end %>
