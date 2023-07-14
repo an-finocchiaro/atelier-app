@@ -8,58 +8,58 @@
       <div class="slider">
         <ul class="slider-ul">
           <li>
-            <img src="/assets/index/landrot.jpg" alt="Isabelle Tuchband galeria em Paris" class="slider-img">
+            <img src="/assets/isabelle/it3.jpeg" alt="Isabelle Tuchband em seu atelier" class="slider-img">
           </li>
           <li>
-            <img src="/assets/index/tuctuc.jpeg" alt="Isabelle Tuchband no Monoprix Paris" class="slider-img">
+            <img src="/assets/isabelle/santa.jpeg" alt="Pintura de Isabelle Tuchband" class="slider-img">
           </li>
           <li>
-            <img src="/assets/index/metro.jpg" alt="Isabelle Tuchband e Verena Matzen painel metro Santa Cruz" class="slider-img">
+            <img src="/assets/isabelle/it10.jpeg" alt="Mãos de Isabelle Tuchband" class="slider-img">
           </li>
         </ul>
       </div>
       <div class="slider fixed-slide">
-        <img src="/assets/index/jornal.jpeg" alt="Atelier Cite na coluna de Monica Bergamo" class="slider-img newspaper-img">
+        <img src="/assets/isabelle/it13.jpeg" alt="Isabelle Tuchband na Rússia em 2019" class="slider-img">
       </div>
       <div class="slider">
         <ul class="slider-ul slider-dois">
           <li>
-            <img src="/assets/index/isavaso.jpg" alt="Isabelle Tuchband pintura em vaso" class="slider-img isavaso-img">
+            <img src="/assets/isabelle/it5.jpeg" alt="Isabelle Tuchband em Sevilha" class="slider-img">
           </li>
           <li>
-            <img src="/assets/index/tigre.jpg" alt="Isabelle Tuchband Jaguar Parade" class="slider-img">
+            <img src="/assets/isabelle/it9.jpeg" alt="Isabelle e Max Tuchband" class="slider-img">
           </li>
           <li>
-            <img src="/assets/index/isaemile.jpeg" alt="Isabelle e Emile Tuchband" class="slider-img">
+            <img src="/assets/isabelle/it11.jpeg" alt="Pés de Isabelle Tuchband" class="slider-img">
           </li>
         </ul>
       </div>
       <div class="slider fixed-slide">
-        <img src="/assets/index/portrait.jpeg" alt="Isabelle Tuchband pintando retrato" class="slider-img">
+        <img src="/assets/isabelle/it4.jpeg" alt="Isabelle Tuchband no atelier" class="slider-img">
       </div>
       <div class="slider">
         <ul class="slider-ul slider-tres">
           <li>
-            <img src="/assets/index/azul.jpg" alt="Isabelle Tuchband e Verena Matzen" class="slider-img">
+            <img src="/assets/isabelle/133.jpeg" alt="Pintura de Isabelle Tuchband" class="slider-img">
           </li>
           <li>
-            <img src="/assets/index/pele.jpg" alt="Pelé com Isabelle Tuchband e Verena Matzen" class="slider-img pele">
+            <img src="/assets/isabelle/isabelle2.jpg" alt="Isabelle Tuchband" class="slider-img">
           </li>
           <li>
-            <img src="/assets/index/vepainting.jpeg" alt="Verena Matzen pintando" class="slider-img">
+            <img src="/assets/isabelle/it8.jpeg" alt="Retrato de Clara Tuchband pintado por sua neta Isabelle Tuchband" class="slider-img">
           </li>
         </ul>
       </div>
       <div class="slider">
         <ul class="slider-ul">
           <li>
-            <img src="/assets/index/dvf.jpeg" alt="pulseira Isabelle Tuchband para Diane Von Furstenberg" class="slider-img">
+            <img src="/assets/isabelle/it14.jpeg" alt="Jaguar Parade por Isabelle Tuchband" class="slider-img">
           </li>
           <li>
-            <img src="/assets/index/ferrero.jpeg" alt="ovo Ferrero por Isabelle Tuchband" class="slider-img ferrero-img">
+            <img src="/assets/isabelle/it7.jpeg" alt="exposição Isabelle Tuchband" class="slider-img">
           </li>
           <li>
-            <img src="/assets/index/cite1.jpg" alt="Isabelle Tuchband e Verena Matzen" class="slider-img">
+            <img src="/assets/isabelle/it6.jpeg" alt="vaso em cerâmica e ouro por Isabelle Tuchband" class="slider-img">
           </li>
         </ul>
       </div>
@@ -70,8 +70,41 @@
   <div class="bio-link">
     <a href="/isabelle-tuchband/bio">
       <div class="store-btn-container">
-        <button class="store-btn bio-btn"><span>BIOGRAFIA</span></button>
+        <button class="store-btn bio-btn"><span>VER BIOGRAFIA</span></button>
+      </div>
+    </a>
+    <a href="https://wa.me/5511982113406?text=Lista%20de%20preços%20Isabelle%20Tuchband" target="_blank">
+      <div class="store-btn-container">
+        <button class="store-btn bio-btn"><span>SOLICITAR LISTA DE PREÇOS</span></button>
       </div>
     </a>
   </div>
 </section>
+<section class="work-section">
+  <div class="work-head">
+    <h2 class="work-head-title">PINTURAS | PAINTINGS | PEINTURES</h2><br>
+  </div>
+  <div class="space"></div>
+  <div class="canvas-grid-admin work-section">
+    <% if @canvas.any? %>
+      <% @canvas.each do |canva| %>
+        <% if canva.exhibit? %>
+          <div class="canvas-card-admin work-card">
+            <div class="img-box-admin">
+              <% if canva.image.attached? %>
+                <%= link_to image_tag(canva.image, class: "canvas-img-admin work-img"), canva %>
+              <% else %>
+                <p>Imagem indisponível</p>
+              <% end %>
+            </div>
+            <p class="title-adm work-title"><%= link_to canva.title, canva_path(canva.id) %></p>
+            <p class="desc-adm work-desc"><%= canva.height %> x <%= canva.width %> cm - <%= canva.technique %>, <%= canva.year %></p>
+            <p class="desc-adm work-reference">referência: <%= canva.code %> - <%= I18n.translate(canva.status) %></p>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+    
+  </div>
+</section>
+

@@ -33,5 +33,13 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(3)
     @canvas = Canva.where(artist_id: 3)
   end
+
+  def isabelle_bio
+  end
   
+  def emile_bio
+  end
+
+  def verena_bio
+  end
 end
