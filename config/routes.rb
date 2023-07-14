@@ -6,8 +6,13 @@ Rails.application.routes.draw do
   get '/admin', to: 'admin#index'
   get '/admin/telas', to: 'admin#show'
   get '/isabelle-tuchband', to: 'artists#isabelle'
+  get '/isabelle-tuchband/bio', to: 'artists#isabelle_bio'
   get '/emile-tuchband',  to: 'artists#emile'
+  get '/emile-tuchband/bio', to: 'artists#emile_bio'
   get '/verena-matzen',  to: 'artists#verena'
+  get '/verena-matzen/bio', to: 'artists#verena_bio'
+  get '/news', to: 'home#news'
+  get '/contact', to: 'home#contact'
 
   resources :artists, only: [:new, :create, :index, :show] 
 
@@ -19,5 +24,5 @@ Rails.application.routes.draw do
     post 'exhibit', on: :member
   end
 
-  resources :products, only: [:new, :create, :index]
+  resources :products, only: [:new, :create, :index, :show, :edit, :update]
 end

@@ -18,5 +18,20 @@ class ArtistsController < ApplicationController
   def show
     @artist = Artist.find(params[:id])
   end
+
+  def isabelle
+    @artist = Artist.find(1)
+    @canvas = Canva.where(artist_id: 1)
+  end
+
+  def emile
+    @artist = Artist.find(2)
+    @canvas = Canva.where(artist_id: 2)
+  end
+
+  def verena
+    @artist = Artist.find(3)
+    @canvas = Canva.where(artist_id: 3)
+  end
   
 end

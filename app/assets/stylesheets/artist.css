@@ -1,0 +1,49 @@
+.artist-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-title {
+  color:#4F95DA;
+  font-family: 'Anton';
+  font-size: 4.8rem;
+  animation-name: name;
+  animation-duration: 3s;
+  animation-timing-function: steps(4, end);
+  animation-delay: 1s;
+  transition: 4s;
+  margin-top: -1%;
+}
+
+.artist-text {
+  color: #211b15;
+  width: 83%;
+  font-family: 'Encode Sans Semi Condensed';
+  font-size: 1.1rem;
+  line-height: 150%;
+  text-align: justify;
+  margin-top: -1%;
+}
+
+
+.bio-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF1493;
+  height: 75px;
+}
+.store-btn.bio-btn {
+  width: 190px;
+  height: 50px;
+  cursor: pointer;
+  color: whitesmoke;
+  background: linear-gradient(180deg, #FF89D6 0%, #FF1493 70%);
+  transition: all 0.3s ease;
+  border-radius:15px;
+  border: #FF1493;
+  box-shadow: 0px 2px 15px -3px #610030;
+ 
+}

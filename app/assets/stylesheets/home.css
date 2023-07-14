@@ -467,6 +467,13 @@ svg {
   font-size: 1.4rem;
   letter-spacing: 5px;
 }
+.artist-link {
+  color: white;
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 5px;
+  z-index: 4;
+}
 
 /* div fade in */
 .reveal{
