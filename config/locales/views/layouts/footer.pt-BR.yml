@@ -1,0 +1,6 @@
+pt-BR:
+  layouts:
+    footer:
+      contact: "CONTATO"
+      send_message: "ENVIAR MENSAGEM"
+      send_email: "ENVIAR EMAIL"

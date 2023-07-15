@@ -1,0 +1,5 @@
+pt-BR:
+  artists:
+    new:
+      register_artist: "Cadastrar artista"
+      register: "Cadastrar"

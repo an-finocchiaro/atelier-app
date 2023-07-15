@@ -1,5 +1,5 @@
 <div class="form-admin"> 
-  <h2>Cadastrar produto</h2><br><br>
+  <h2><%= t '.register_product' %></h2><br><br>
 
   <%= form_with(model: [@artist, @product]) do |f| %>
     <div>
@@ -47,6 +47,6 @@
       <%= f.label :image %>
       <%= f.file_field :image, accept: 'image/jpeg' %>
     </div>
-    <%= f.submit 'Cadastrar', class: "form-button" %>
+    <%= f.submit (t '.register'), class: "form-button" %>
   <% end %>
 </div>

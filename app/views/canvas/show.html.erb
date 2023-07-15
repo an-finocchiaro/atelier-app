@@ -9,7 +9,7 @@
   <p class="canva-show-description"><%= @canva.technique %></p>
   <p class="canva-show-description"><%= @canva.height %> x <%= @canva.width %> cm</p>
   <p class="canva-show-description"><%= @canva.year %></p>
-  <p class="canva-show-reference">referência: <%= @canva.code %></p>
+  <p class="canva-show-reference"><%= t '.reference' %><%= @canva.code %></p>
   <% if user_signed_in? %>
     <p class="canva-show-description">R$ <%= @canva.price %></p>
   <% end %>

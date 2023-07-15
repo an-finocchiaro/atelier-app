@@ -1,0 +1,13 @@
+pt-BR:
+  admin:
+    index:
+      user: "Usuário: "
+      title_one: "TELAS"
+      subtitle_one: "Ver telas:"
+      title_two: "PRODUTOS LOJA"
+      title_three: "ARTISTA"
+      register_artist: "Registrar artista"
+      register_canva: "Cadastrar tela"
+      register_product: "Cadastrar produto da loja"
+      end_session: "Sair"
+      

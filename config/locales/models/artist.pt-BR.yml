@@ -1,0 +1,9 @@
+pt-BR:
+  activerecord:
+    models:
+      artist:
+        one: artista
+        other: artistas
+    attributes:
+      artist:
+        name: 'Nome'

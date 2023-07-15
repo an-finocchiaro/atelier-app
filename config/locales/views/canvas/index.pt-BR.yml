@@ -1,0 +1,6 @@
+pt-BR:
+  canvas:
+    index:
+      registered_canvas: "Telas Cadastradas"
+      artist_name: "artista: "
+      code: "código: "

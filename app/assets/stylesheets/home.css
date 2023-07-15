@@ -3,15 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: #F4FF00;
 }
-
 a {
   text-decoration: none;
 }
-
 .flags-container {
   background-color: #FF6EC7;
   width: 100%;
@@ -33,7 +30,6 @@ a {
   background-color:#4F95DA;
   color: white;
 }
-
 /** form **/
 .form-admin {
   width: 80%;
@@ -42,13 +38,11 @@ a {
   font-size: 18px;
   text-decoration: none;
 }
-
 .notice-box {
   margin-left: 30px;
   font-family: 'Encode Sans Semi Condensed', sans-serif;
   font-size: 18px;
 }
-
 select {
   font-family: 'Encode Sans Semi Condensed', sans-serif;
   font-size: 15px;
@@ -59,7 +53,6 @@ select {
   border-radius: 8px;
   text-align: center;
 }
-
 .form-button {
   text-align: center;
   font-size: 15px;
@@ -73,7 +66,6 @@ select {
   margin-bottom: 10px;
   width: 110px;
 }
-
 .edit-button {
   width: 110px;
   height: 40px;
@@ -83,9 +75,7 @@ select {
   font-size: 15px;
   cursor: pointer;
   border-radius: 8px;
-
 }
-
 .form-input {
   font-family: 'Encode Sans Semi Condensed', sans-serif;
   font-size: 15px;
@@ -98,12 +88,10 @@ select {
   margin-bottom: 11px;
   margin-top: 5px;
 }
-
 .logout {
   margin-left: 0px;
   font-size: medium;
 }
-
 .artist-name-admin {
   font-family: 'Encode Sans Semi Condensed';
   font-weight: 700;
@@ -111,7 +99,6 @@ select {
   padding-top: 3%;
   padding-left: 3%;
 }
-
 .canvas-grid-admin {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -123,7 +110,6 @@ select {
   text-decoration: none;
   text-align: center;
 }
-
 .canvas-card-admin {
   display: flex;
   flex-direction: column;
@@ -136,47 +122,39 @@ select {
   overflow: hidden;
   border-radius: 22px;
 }
-
 .img-box-admin {
   width: 100%;
   height: 75%;
   overflow: hidden;
 }
-
 .canvas-img-admin {
   max-width: 100%;
   object-fit: cover;
   min-height: 100%;
 }
-
 .desc-adm {
   text-align: left;
   font-size: 0.9rem;
   margin-left: 7%;
 }
-
 .title-adm {
   text-align: left;
   font-size: 0.9rem;
   margin-left: 7%;
   font-weight: 700;
 }
-
 .canva-img {
   max-height: 300px;
 }
-
 /** navbar **/
 .topnav {
   background-color: #FF6EC7;
   overflow:hidden;
 }
-
 .topnav a {
   display: block;
   float: left;
 }
-
 .topnav a.nav-link {
   color: whitesmoke;
   font-family: 'Encode Sans Semi Condensed', sans-serif;
@@ -185,14 +163,12 @@ select {
   margin-top: 20px;
   padding: 17px;
   margin-left: 20px;
-  
 }
 .topnav a.nav-link:hover {
   background-color: #00ced1;
   transition: 0.7s;
   border-radius: 15px 15px 0 0;
 }
-
 .logo-link {
   height: 75px;
 }
@@ -206,7 +182,6 @@ select {
   margin-left: 10px;
   padding: 6px;
 }
-
 .topnav .icon {
   display: none;
   color: whitesmoke;
@@ -222,7 +197,6 @@ select {
   transition: 0.7s;
   border-radius: 9px;
 }
-
 /** music box **/
 .box-player {
   display: grid;
@@ -230,7 +204,6 @@ select {
   grid-template-rows: 1fr;
   background-color: #FF1493;
 }
-
 /* party time */
 .content {
   display: flex;
@@ -242,36 +215,30 @@ select {
   font-family: 'Encode Sans Semi Condensed', sans-serif;
   font-size: 38px;
 }
-
 .visible {
   height: 40px;
   overflow: hidden;
   font-weight: 600;
 }
-
 .visible:before {
   content:'(';
 }
-
 .visible:after {
   position: absolute;
   content: ')';
   margin-left: 230px;
   margin-top: -200px;
 }
-
 .visible:before, .visible:after {
   color: rgb(19, 218, 46);
   animation: 2s linear 0s normal none infinite opacity;
 }
-
 .sound-ul {
   padding-left: 35px;
   text-align: center;
   list-style: none;
   animation: 7s linear 0s normal none infinite change;
 }
-
 .box-music {
   display: flex;
   align-items: center;
@@ -307,7 +274,6 @@ select {
     transform: translateY(-83px);
   }
 }
-
 /** artists section **/
 .box-grid {
   max-height: 550px;
@@ -316,14 +282,12 @@ select {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
-
 .box-image {
   display: flex;
   align-items: center;
   justify-content: center;
   max-height: 550px;
 }
-
 .photo {
   position: relative;
   z-index: 2;
@@ -331,7 +295,6 @@ select {
   min-height: 550px;
   object-fit: cover;
 }
-
 .box-names {
   display: grid;
   grid-template-columns: 1fr;
@@ -339,15 +302,12 @@ select {
   max-height: 550px;
   background-color: rgb(19, 218, 46);
 }
-
 .box-names.emile {
   background-color: #f80427;
 }
-
 .box-names.verena {
   background-color: #21ab9b;
 }
-
 .artist-name {
   color:#4F95DA;
   font-family: 'Anton';
@@ -360,17 +320,14 @@ select {
   animation-delay: 1s;
   transition: 4s;
 }
-
 .artist-name.emile {
   color: whitesmoke;
   margin-top: -1vw;
   font-size: 11vw;
 }
-
 .artist-name.verena {
   color: #FF6EC7;
 }
-
 .artist-surname {
   color: whitesmoke;
   font-family: 'Anton';
@@ -384,7 +341,6 @@ select {
   animation-iteration-count: 2;
   transition: 3s;
 }
-
 .artist-surname.emile {
   color: #a1b20a;
   margin-top: -1vw;
@@ -417,7 +373,6 @@ select {
     opacity: 1;
   }
 }
-
 /* artists button */
 .box-button {
   display: flex;
@@ -426,13 +381,11 @@ select {
   margin-left: 11vw;
   margin-top: 3vw;
 }
-
 .center {
   position: absolute;
   width: 210px;
   height: 70px;
 }
-
 .btn {
   width: 210px;
   height: 70px;
@@ -442,15 +395,12 @@ select {
   transition: 1s ease-in-out;
   border-radius: 25px;
 }
-
 .btn.emile {
   background: #79688e;
 }
-
 .btn.verena {
   background: #91d400;
 }
-
 svg {
   width: 210px;
   height: 70px;
@@ -464,52 +414,37 @@ svg {
   transition: 1s ease-in-out;
   opacity: 80%;
 }
-
 .btn:hover {
   transition: 1s ease-in-out;
   background: #f80427;
   transition: 0.7s;
 }
-
 .btn:hover.emile {
   background: #63acc7;
 }
-
 .btn:hover.verena {
   background: #e81a4c;
 }
-
 .btn:hover svg {
   stroke-dashoffset: -480;
 }
-
 .btn span {
   color: white;
   font-family: 'Encode Sans Semi Condensed', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 5px;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
 }
-.artist-link {
-  color: white;
-  font-family: 'Encode Sans Semi Condensed', sans-serif;
-  font-size: 1.4rem;
-  letter-spacing: 5px;
-  z-index: 4;
-}
-
 /* div fade in */
 .reveal{
   transform: translateY(120px);
   opacity: 0;
   transition: 1s all ease;
 }
-
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
   transition: 1s all ease;
 }
-
 /* atelier section */
 .atelier-grid {
   display: grid;
@@ -519,13 +454,11 @@ svg {
   height: 600px;
   overflow: hidden;
 }
-
 .atelier-description {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 .atelier-text {
   color: #211b15;
   width: 85%;
@@ -536,7 +469,6 @@ svg {
   padding-top: 3%;
   padding-bottom: 3%;
 }
-
 .atelier-images {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -544,7 +476,6 @@ svg {
   overflow: hidden;
   height: 600px;
 }
-
 .slider {
   display: flex;
   flex-direction: row;
@@ -555,7 +486,6 @@ svg {
   max-height: 300px;
   overflow: hidden;
 }
-
 .slider-ul {
   width: 100%;
   position: relative;
@@ -568,31 +498,26 @@ svg {
   animation-iteration-count:infinite;
   transition: 4s;
 }
-
 .slider-ul.slider-dois {
   animation-delay: 4s;
   animation-duration: 50s;
 }
-
 .slider-ul.slider-tres {
   animation-delay: 8s;
   animation-duration: 50s;
 }
-
 .slider li {
   height: 300px;
   min-width: 100%;
   min-height: 300px;
   list-style: none;
 }
-
 .slider-img {
   height: 300px;
   object-fit: cover;
   min-height: 300px;
   min-width: 100%;
 }
-
 .newspaper-img {
   height: 110%;
 }
@@ -633,7 +558,6 @@ svg {
     margin-top: 600px;
   }
 }
-
 /** store **/
 .store-head {
   display: grid;
@@ -643,7 +567,6 @@ svg {
   align-items: center;
   background-color:#ff0099;
 }
-
 .store-title {
   margin-left: 3vw;
   width: 50%;
@@ -658,7 +581,6 @@ svg {
   animation: typewriter 4s steps(24) infinite alternate,
     blink 2000ms steps(24) infinite normal;
 }
-
 .store-btn-container {
   width: 100%;
   display: flex;
@@ -668,7 +590,6 @@ svg {
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
-
 .store-btn {
   width: 210px;
   height: 60px;
@@ -684,7 +605,6 @@ svg {
   transform:scale(1.1,1.1);
   background: #FF1493;
 }
-
 .store-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -696,7 +616,6 @@ svg {
   background-color: #FAE6FA;
   text-decoration: none;
 }
-
 .store-card {
   display: flex;
   flex-direction: column;
@@ -710,7 +629,6 @@ svg {
   border-radius: 22px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
 .product-img-box {
   display: flex;
   align-items: center;
@@ -719,12 +637,10 @@ svg {
   max-height: 80%;
   overflow: hidden;
 }
-
 .product-img {
   width: 100%;
   object-fit: cover;
 }
-
 .product-title {
   font-size: 1.6rem;
   font-weight: 600;
@@ -732,19 +648,16 @@ svg {
   margin-left: 5%;
   margin-bottom: 1%;
 }
-
 .product-description {
   font-size: 1.3rem;
   font-weight: 400;
   margin-left: 5%;
 }
-
 .product-description.reference {
   margin-top: 1%;
   font-size: 0.8vw;
   color: #808080;
 }
-
 .product-link {
   font-size: 1.6rem;
   font-weight: 700;
@@ -774,7 +687,6 @@ svg {
     border-color: transparent;
   }
 }
-
 /** footer **/
 .footer-box {
   display: grid;
@@ -783,17 +695,14 @@ svg {
   background-color: #FF1493;
   height: 120px;
 }
-
 .footer-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
 }
-
 .footer-column.instagram {
   background-color: #6d4897;
 }
-
 .contact {
   font-family: 'Anton';
   font-size: 30px;
@@ -803,16 +712,13 @@ svg {
   margin-left: 3vw;
   padding-top: 1%;
 }
-
 .contact-insta {
   margin-left: 2vw;
 }
-
 .flip-container {
   perspective: 1000px;
   height: 60px;
 }
-
 .flipper{
   position: relative;
 	width: 100%;
@@ -820,11 +726,9 @@ svg {
   transition: transform 1s;
 	transform-style: preserve-3d;
 }
-
 .flip-container:hover .flipper{
 	transform: rotateY(180deg);
 }
-
 .front, .back{
 	position: absolute;
 	width: 100%;
@@ -837,14 +741,12 @@ svg {
   backface-visibility: hidden;
   padding-top: 2%;
 }
-
 .front {
   background-color: #FF4f00;
 }
 .front.email {
   background-color: #009b77;
 }
-
 .back{
 	transform: rotateY(180deg);
   background-color: #91d400;
@@ -856,7 +758,6 @@ svg {
   margin-left: 3vw;
   color:whitesmoke;
 }
-
 .box-instagram {
   display: flex;
   flex-direction: row;
@@ -864,7 +765,6 @@ svg {
   height: 40px;
   margin-left: 4%;
 }
-
 .box-instagram-isabelle {
   background-color:#FF4f00;
 }
@@ -883,7 +783,6 @@ svg {
 .box-instagram-atelier:hover {
   background-color: #63acc7;
 }
-
 .insta-link {
   color:whitesmoke;
   font-family: 'Anton';
@@ -893,7 +792,6 @@ svg {
   padding-top: 1%;
   margin-left: 3vw;
 }
-
 .credits {
   background-color:#FF6EC7;
   display: flex;
@@ -902,7 +800,6 @@ svg {
   justify-content:center;
   text-align:right;
 }
-
 .credit {
   padding-top: 15px;
   font-family: 'Encode Sans Semi Condensed';

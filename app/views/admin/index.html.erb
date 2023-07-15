@@ -1,27 +1,27 @@
  <% if user_signed_in? %>
   <div class="form-admin">
     <div><br><br>
-      <p>Usuário: <%= current_user.name %>  |  <%= current_user.email %></p>
+      <p><%= t '.user' %><%= current_user.name %>  |  <%= current_user.email %></p>
     </div>
     <br><br>
     <div>
-      <h4>TELAS</h4><br>
-      <p>Ver telas:</p><br>
+      <h4><%= t '.title_one' %></h4><br>
+      <p><%= t '.subtitle_one' %></p><br>
       <%= link_to 'Isabelle Tuchband -', '/admin/telas?param=1' %>
       <%= link_to 'Émile Tuchband -',  '/admin/telas?param=2' %>
       <%= link_to 'Verena Matzen',  '/admin/telas?param=3' %>
     </div><br>
     <div>
-      <%= link_to 'Cadastrar tela', new_canva_path %>
+      <%= link_to (t '.register_canva'), new_canva_path %>
     </div><br>
     <div>
-      <h4>PRODUTOS LOJA</h4><br>
-      <%= link_to 'Cadastrar produto loja', new_product_path %>
+      <h4><%= t '.title_two' %></h4><br>
+      <%= link_to (t '.register_product'), new_product_path %>
     </div><br>
     <div>
-      <h4>ARTISTA</h4><br>
-      <%= link_to 'Cadastrar artista', new_artist_path %>
+      <h4><%= t '.title_three' %></h4><br>
+      <%= link_to (t '.register_artist'), new_artist_path %>
     </div><br><br>
-    <%= button_to 'Sair', destroy_user_session_path, method: :delete, class: "form-button" %>
+    <%= button_to (t '.end_session'), destroy_user_session_path, method: :delete, class: "form-button" %>
   </div>
 <% end %>

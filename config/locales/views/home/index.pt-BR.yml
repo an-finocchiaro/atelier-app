@@ -1,7 +1,10 @@
 pt-BR:
   home:
     index:
-      message_adm: "Área Restrita a Administradores - Olá, "
-      message_user: "Área de Usuários - Olá, "
-      order_new: 'Cadastrar Ordem de Serviço'
-      orders_index: 'Ver Ordens de Serviço'
+      enter: "ENTRAR"
+      missing_img: "Imagem indisponível"
+      reference: "referência: "
+      store_link: "ver na loja"
+      atelier_text: "O Atelier Cité é palco da colorida história de três artistas: Émile Tuchband, Isabelle Tuchband e Verena Matzen. Émile nasceu em Paris e viveu entre o Brasil e a França, onde realizava exposições anuais na galeria de Marcel Bernheim. Isabelle, filha de Émile, cresceu entre os pincéis e as cores do atelier do pai no Brasil. Verena nasceu na Argentina e mudou-se ainda criança para o Brasil. Isabelle e Verena moraram juntas em Paris, onde estudaram na École des Arts Décoratifs. Em 1989, os três inauguraram o Atelier Cité na rua Bela Cintra, em São Paulo. Ainda que cada artista tenha desenvolvido sua linguagem individual, a fundamentalidade da cor conecta o conjunto dos trabalhos e tem sido a alma da curadoria de diversas exposições, como a realizada pelo MAB-FAAP, TUCHBAND & TUCHBAND. Um palco compartilhado repleto de cores, espiritualidade e joie de vivre. Bienvenue à tous!"
+      
+      

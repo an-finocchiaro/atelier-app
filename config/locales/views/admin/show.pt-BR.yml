@@ -1,0 +1,5 @@
+pt-BR:
+  admin:
+    show:
+      missing_img: "Imagem indisponível"
+      code: "código: "

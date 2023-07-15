@@ -1,9 +1,9 @@
- <h4>Telas Cadastradas</h4>
+ <h4><%= t '.registered_canvas' %></h4>
 
  <div>
     <% if user_signed_in? %>
       <% @canvas.each do |canva| %>
-        <p>artista: <%= canva.artist.name %>  |  código: <%= link_to canva.code, canva_path(canva.id) %></p>
+        <p><%= t '.artist_name' %><%= canva.artist.name %>  |  <%= t '.code' %><%= link_to canva.code, canva_path(canva.id) %></p>
       <% end %>
     <% end %>
  </div>

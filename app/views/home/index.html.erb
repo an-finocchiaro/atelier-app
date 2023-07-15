@@ -18,7 +18,7 @@
                 <polyline points="209,29 209,69 1,69 1,1 160,1" class="bg-line"/>
                 <polyline points="209,29 209,69 1,69 1,1 160,1" class="hl-line"/>
               </svg>
-              <span>ENTREZ</span>
+              <span><%= t '.enter' %></span>
             </button>
           </a>
         </div>
@@ -44,7 +44,7 @@
                 <polyline points="209,29 209,69 1,69 1,1 160,1" class="bg-line"/>
                 <polyline points="209,29 209,69 1,69 1,1 160,1" class="hl-line"/>
               </svg>
-              <span>ENTREZ</span>
+              <span><%= t '.enter' %></span>
             </button>
           </a>
         </div>
@@ -70,7 +70,7 @@
                 <polyline points="209,29 209,69 1,69 1,1 160,1" class="bg-line"/>
                 <polyline points="209,29 209,69 1,69 1,1 160,1" class="hl-line"/>
               </svg>
-              <span>ENTREZ</span>
+              <span><%= t '.enter' %></span>
             </button>
           </a>
         </div>
@@ -81,7 +81,7 @@
 <section class="atelier-section">
   <div class="atelier-grid reveal">
     <div class="atelier-description">
-      <p class="atelier-text">O Atelier Cité é palco da colorida história de três artistas: Émile Tuchband, Isabelle Tuchband e Verena Matzen. Émile nasceu em Paris e viveu entre o Brasil e a França, onde realizava exposições anuais na galeria de Marcel Bernheim. Isabelle, filha de Émile, cresceu entre os pincéis e as cores do atelier do pai no Brasil. Verena nasceu na Argentina e mudou-se ainda criança para o Brasil. Isabelle e Verena moraram juntas em Paris, onde estudaram na École des Arts Décoratifs. Em 1989, os três inauguraram o Atelier Cité na rua Bela Cintra, em São Paulo. Ainda que cada artista tenha desenvolvido sua linguagem individual, a fundamentalidade da cor conecta o conjunto dos trabalhos e tem sido a alma da curadoria de diversas exposições, como a realizada pelo MAB-FAAP, <a href="https://www.faap.br/hotsites/hotsite_isabelle/index.htm" class="link-faap" target="_blank">TUCHBAND</a>. Um palco compartilhado em cores, espiritualidade e joie de vivre. Bienvenue à tous!</p>
+      <p class="atelier-text"><%= t '.atelier_text' %></p>
     </div>
     <div class="atelier-images">
       <div class="slider">
@@ -161,14 +161,14 @@
             <% if product.image.attached? %>
               <%= image_tag product.image, class: "product-img" %>
             <% else %>
-              <p>Imagem indisponível</p>
+              <p><%= t '.missing_img' %></p>
             <% end %>
           </div>
           <p class="product-title"><%= product.title %></p>
           <p class="product-description"><%= product.artist.name %> - <%= product.technique %></p>
           <p class="product-description"><%= product.height %> x <%= product.width %> cm - <%= product.year %> - <%= product.edition %></p>
-          <p class="product-description reference">referência: <%= product.sku %></p>
-          <a href="#"><p  class="product-link">ver na loja</p></a>
+          <p class="product-description reference"><%= t '.reference' %><%= product.sku %></p>
+          <a href="#"><p  class="product-link"><%= t '.store_link' %></p></a>
         </div>
       <% end %>
     <% end %>
