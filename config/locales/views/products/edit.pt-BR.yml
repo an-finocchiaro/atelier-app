@@ -1,0 +1,6 @@
+pt-BR:
+  products:
+    edit:
+      edit_product: "Editar Produto"
+      missing_img: "Imagem indisponível"
+      code: "código"

@@ -9,7 +9,7 @@ describe 'Usuário acessa a página inicial do site' do
     expect(page).to have_link 'ISABELLE TUCHBAND'
     expect(page).to have_link 'ÉMILE TUCHBAND'
     expect(page).to have_link 'VERENA MATZEN'
-    expect(page).to have_link 'À LA UNE'
+    expect(page).to have_link 'NEWS'
     expect(page).to have_link 'LOJA | EDIÇÕES LIMITADAS'
     expect(page).to have_link 'CONTATO'
   end

@@ -1,0 +1,23 @@
+<div>
+  <% if @product.image.attached? %>
+    <%= link_to image_tag(@product.image, class:"canva-img"), @product.image, target:'_blank' %>
+  <% end %>
+</div>
+
+<div>
+  <p class="canva-show-title"><%= @product.title %></p>
+  <p class="canva-show-description"><%= @product.technique %></p>
+  <p class="canva-show-description"><%= @product.height %> x <%= @product.width %> cm</p>
+  <p class="canva-show-description"><%= @product.year %></p>
+  <p class="canva-show-description"><%= @product.edition %></p>
+  <p class="canva-show-reference"><%= t '.reference' %><%= @product.sku %></p>
+  <% if user_signed_in? %>
+    <p class="canva-show-description">R$ <%= @product.price %></p>
+  <% end %>
+</div>
+<% if user_signed_in? %>
+  <div class="buttons-grid form-admin">
+    <%= link_to 'Editar', edit_product_path(@product.id), class: "edit-button" %><br><br>
+    <%= button_to 'Excluir produto', product_path(@product.id), method: :delete, class:"form-button" %>
+  </div>
+<% end %>

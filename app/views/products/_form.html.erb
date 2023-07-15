@@ -1,0 +1,49 @@
+  <%= form_with(model: [@artist, @product]) do |f| %>
+    <div>
+      <%= f.label :artist_id %>
+      <%= f.collection_select :artist_id, @artists, :id, :name, class: "form-input" %>
+    </div>
+    <br>
+    <div>
+      <%= f.label :sku %>
+      <%= f.text_field :sku, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :collection_name %>
+      <%= f.text_field :collection_name, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :technique %>
+      <%= f.text_field :technique, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :height %>
+      <%= f.number_field :height, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :width %>
+      <%= f.number_field :width, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :year %>
+      <%= f.number_field :year, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :edition %>
+      <%= f.text_field :edition, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :price %>
+      <%= f.number_field :price, class: "form-input" %>
+    </div>
+    <div>
+      <%= f.label :image %>
+      <%= f.file_field :image, accept: 'image/jpeg' %>
+    </div>
+    <%= f.submit (t '.save'), class: "form-button" %>
+  <% end %>
+</div>

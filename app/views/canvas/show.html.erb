@@ -17,23 +17,24 @@
 <% if user_signed_in? %>
   <div class="buttons-grid form-admin">
     <% if @canva.available? %>
-      <%= button_to 'Acervo', collection_canva_path(@canva.id), class:"form-button" %>
-      <%= button_to 'Vendida', sold_canva_path(@canva.id), class:"form-button" %>
+      <%= button_to 'Acervo', collection_canva_path(@canva.id), class:"form-button" %><br>
+      <%= button_to 'Vendida', sold_canva_path(@canva.id), class:"form-button" %><br>
     <% end %>
     <% if @canva.collection? %>
-      <%= button_to 'Disponível', available_canva_path(@canva.id), class:"form-button" %>
-      <%= button_to 'Vendida', sold_canva_path(@canva.id), class:"form-button" %>
+      <%= button_to 'Disponível', available_canva_path(@canva.id), class:"form-button" %><br>
+      <%= button_to 'Vendida', sold_canva_path(@canva.id), class:"form-button" %><br>
     <% end %>
     <% if @canva.sold? %>
-      <%= button_to 'Disponível', available_canva_path(@canva.id), class:"form-button" %>
-      <%= button_to 'Acervo', collection_canva_path(@canva.id), class:"form-button" %>
+      <%= button_to 'Disponível', available_canva_path(@canva.id), class:"form-button" %><br>
+      <%= button_to 'Acervo', collection_canva_path(@canva.id), class:"form-button" %><br>
     <% end %>
     <% if @canva.hide? %>
-      <%= button_to 'Mostrar', exhibit_canva_path(@canva.id), class:"form-button" %>
+      <%= button_to 'Mostrar', exhibit_canva_path(@canva.id), class:"form-button" %><br>
     <% end %>
     <% if @canva.exhibit? %>
-      <%= button_to 'Não Exibir', hide_canva_path(@canva.id), class:"form-button" %>
+      <%= button_to 'Não Exibir', hide_canva_path(@canva.id), class:"form-button" %><br>
     <% end %>
-    <%= link_to 'Editar', edit_canva_path(@canva.id), class: "edit-button" %>
+    <%= link_to 'Editar', edit_canva_path(@canva.id), class: "edit-button" %><br><br>
+    <%= button_to 'Excluir tela', canva_path(@canva.id), method: :delete, class:"form-button" %>
   </div>
 <% end %>

@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+  <h2 class="artist-name-admin"><%= t '.registered_products' %></h2>
+  <div class="canvas-grid-admin">
+    <% if @products.any? %>
+      <% @products.each do |product| %>
+        <div class="canvas-card-admin">
+          <div class="img-box-admin">
+            <% if product.image.attached? %>
+              <%= link_to image_tag(product.image, class: "canvas-img-admin"), product.image, :target => '_blank' %>
+            <% else %>
+              <p><%= t '.missing_img' %></p>
+            <% end %>
+          </div>
+          <p class="title-adm"><%= link_to product.title, product_path(product.id) %></p>
+          <p class="desc-adm"><%= product.artist.name %></p>
+          <p class="desc-adm"><%= product.height %> x <%= product.width %> cm</p>
+          <p class="desc-adm"><%= product.technique %> - <%= product.year %></p>
+          <p class="desc-adm"> <%= product.edition %> - <%= t '.code' %><%= product.sku %></p>
+          <p class="desc-adm">R$ <%= product.price %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

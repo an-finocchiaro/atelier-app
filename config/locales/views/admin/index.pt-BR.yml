@@ -2,12 +2,12 @@ pt-BR:
   admin:
     index:
       user: "Usuário: "
-      title_one: "TELAS"
-      subtitle_one: "Ver telas:"
-      title_two: "PRODUTOS LOJA"
-      title_three: "ARTISTA"
-      register_artist: "Registrar artista"
+      title_canvas: "TELAS"
+      subtitle_canvas: "Ver telas:"
+      title_products: "PRODUTOS LOJA"
+      title_artists: "ARTISTA"
+      register_artist: "Cadastrar artista"
       register_canva: "Cadastrar tela"
-      register_product: "Cadastrar produto da loja"
+      register_product: "Cadastrar produto loja"
+      products_all: "Produtos Cadastrados"
       end_session: "Sair"
-      

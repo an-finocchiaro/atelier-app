@@ -1,0 +1,6 @@
+pt-BR:
+  products:
+    index:
+      registered_products: "Produtos Cadastrados"
+      missing_img: "Imagem indisponível"
+      code: "código"

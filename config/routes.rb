@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :artists, only: [:new, :create, :index, :show] 
 
-  resources :canvas, only: [:new, :create, :index, :show, :edit, :update] do
+  resources :canvas, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
     post 'available', on: :member
     post 'collection', on: :member
     post 'sold', on: :member
@@ -24,5 +24,5 @@ Rails.application.routes.draw do
     post 'exhibit', on: :member
   end
 
-  resources :products, only: [:new, :create, :index, :show, :edit, :update]
+  resources :products, only: [:new, :create, :index, :show, :edit, :update, :destroy]
 end

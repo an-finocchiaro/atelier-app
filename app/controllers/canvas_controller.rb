@@ -1,5 +1,5 @@
 class CanvasController < ApplicationController
-  before_action :set_canva, only: %i[show available collection sold hide exhibit edit update]
+  before_action :set_canva, only: %i[show available collection sold hide exhibit edit update destroy]
   before_action :canva_params, only: %i[create update]
   def new
     @canva = Canva.new
@@ -30,7 +30,6 @@ class CanvasController < ApplicationController
   end
 
   def update
-    @canva = Canva.find(params[:id])
     if @canva.update(canva_params)
       redirect_to @canva, notice: 'Alteração efetuada com sucesso'
     else
@@ -62,6 +61,11 @@ class CanvasController < ApplicationController
   def exhibit
     @canva.exhibit!
     redirect_to @canva, notice: 'Alteração efetuada com sucesso, tela será exibida'
+  end
+
+  def destroy
+    @canva.destroy
+    redirect_to '/admin', notice: 'Tela removida com sucesso'
   end
 
   private

@@ -13,10 +13,9 @@ describe 'Usuário acessa página de artista' do
     find(:css, '#isabelle-button').click
     
     expect(page).to have_link 'ATELIER CITÉ'
-    expect(page).to have_link 'À LA UNE'
+    expect(page).to have_link 'NEWS'
     expect(page).to have_link 'LOJA | EDIÇÕES LIMITADAS'
     expect(page).to have_link 'CONTATO'
-    
     expect(page).to have_content 'Nuvens'
     expect(page).to have_content '120 x 100 cm'
     expect(page).to have_content '2011'
