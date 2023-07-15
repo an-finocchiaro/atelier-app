@@ -36,3 +36,8 @@ https://blog.saeloun.com/2022/01/05/how-to-use-enums-in-rails
     </a>
   </figure>
 </div>
+
+
+<div class="box-music">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/38GAGvXt4wMNFsOVZhpG3w?utm_source=generator&theme=0" width="70%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy" class="music-frame"></iframe>
+</div>

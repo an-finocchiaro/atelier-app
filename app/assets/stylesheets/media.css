@@ -85,7 +85,7 @@
 @media screen and (max-width: 1500px) {
   .topnav a.nav-link {
     margin-left: 10px;
-    font-size: 19px;
+    font-size: 17px;
   }
   .artist-surname {
     margin-top: -4vw;
@@ -136,7 +136,7 @@
 
 @media screen and (max-width: 1400px) {
   .topnav a.nav-link {
-    margin-left: 5px;
+    margin-left: 2px;
     font-size: 16px;
     min-width: 70px;
     padding-left: 12px;
@@ -199,9 +199,12 @@
   .topnav a.icon {
     float:right;
     display: block;
-    font-size: 30px;
-    text-align: center;
-    padding: 20px;
+  }
+  .topnav a.nav-link {
+    margin-top: 10px;
+  }
+  .topnav a.nav-link:hover {
+    border-radius:0;
   }
   .topnav a.nav-link {
     margin-left: 0;

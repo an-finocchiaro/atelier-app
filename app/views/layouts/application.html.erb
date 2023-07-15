@@ -15,6 +15,17 @@
   </head>
 
   <body>
+    <div class="flags-container">
+      <a href="<%= request.path %>?locale=en">
+        <span class="flag-icon">EN</span>
+      </a>
+      <a href="<%= request.path %>?locale=pt-BR">
+        <span class="flag-icon">PT</span>
+      </a>
+        <a href="<%= request.path %>?locale=fr">
+        <span class="flag-icon">FR</span>
+      </a>
+    </div>
     <header>
       <%= render 'layouts/top' %>
     </header>
