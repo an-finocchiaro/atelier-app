@@ -84,7 +84,6 @@
 
 @media screen and (max-width: 1500px) {
   .topnav a.nav-link {
-    margin-left: 10px;
     font-size: 17px;
   }
   .artist-surname {
@@ -136,11 +135,8 @@
 
 @media screen and (max-width: 1400px) {
   .topnav a.nav-link {
-    margin-left: 2px;
+    margin-left: 25px;
     font-size: 16px;
-    min-width: 70px;
-    padding-left: 12px;
-    padding-right: 12px;
   }
   .atelier-text {
     font-size: 1.05rem;
