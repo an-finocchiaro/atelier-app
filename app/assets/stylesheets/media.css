@@ -68,6 +68,10 @@
       margin-top: 450px;
     }
   }
+  .artist-text {
+    font-size: 1.1rem;
+    line-height: 150%;
+  }
 }
 
 @media screen and (max-width: 1600px) {
@@ -142,6 +146,9 @@
     font-size: 1.05rem;
     line-height: 180%;
   }
+  .artist-title {
+    font-size: 5.2vw;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -187,6 +194,10 @@
     max-width: 110%;
     margin-left: -18px;
    }
+   .artist-text {
+    font-size: 1.1rem;
+    line-height: 140%;
+  }
 }
 
 /**navbar**/
@@ -229,6 +240,39 @@
     grid-gap: 3% 5%;
     padding-left: 7%;
     padding-right: 7%;
+  }
+  .artist-text {
+    font-size: 1rem;
+    line-height: 130%;
+  }
+  .canvas-grid-admin {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .bio-title-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .bio-title-name {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .bio-title-bio {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 50%;
+    height: 90px;
+  }
+  .bio-imgs-grid {
+    margin-top: -90px;
+  }
+  .bio-img-box {
+    height: 320px;
   }
 }
 
@@ -349,6 +393,16 @@
   }
   .insta-link {
     font-size: 22px;
+  }
+  .artist-title {
+    font-size: 10vw;
+  }
+  .artist-text {
+    font-size: 1.1rem;
+    line-height: 150%;
+  }
+  .bio-img-box {
+    height:auto;
   }
 }
 
@@ -582,9 +636,43 @@
   .product-img-box {
     max-height: 63%;
   }
+  .artist-text {
+    font-size: 1rem;
+  }
+  .bio-link {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 160px;
+  }
+  .bio-link a{
+    padding-top: 1%;
+  }
+  .work-head-title {
+    font-size: 1.1rem;
+  }
+  .canvas-grid-admin {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .bio-title-name {
+    font-size: 10vmax;
+  }
+  .bio-title-bio {
+    padding-left: 0;
+    margin-left: 8%;
+  }
+  .bio-text {
+    margin-left: 8%;
+  }
+  .bio-imgs-grid {
+    margin-top: 5%;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  .flag-icon {
+    margin-right: 4%;
+  }
   .artist-name {
     font-size: 23vw;
     margin-left: 5vw;
@@ -608,5 +696,25 @@
   }
   .store-btn {
     margin-top: -10px;
+  }
+  .artist-text {
+    line-height: 145%;
+  }
+  .work-head-title {
+    margin-left:0;
+    text-align: center;
+  }
+  .canvas-grid-admin {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+  .bio-title-name {
+    height: 70px;
+    font-size: 11vmax;
+    letter-spacing: 1px;
+  }
+  .bio-title-bio {
+    height: 70px;
   }
 }
