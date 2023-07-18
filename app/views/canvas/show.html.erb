@@ -1,19 +1,36 @@
-<div>
-  <% if @canva.image.attached? %>
-    <%= link_to image_tag(@canva.image, class:"canva-img"), @canva.image, target:'_blank' %>
-  <% end %>
+<div class="canva-show-section">
+  <div class="canva-img-box">
+    <% if @canva.image.attached? %>
+      <%= link_to image_tag(@canva.image, class:"canva-img"), @canva.image, target:'_blank' %>
+    <% end %>
+  </div>
+
+  <div class="canva-show-text-box">
+    <p class="canva-show-title"><%= @canva.title %></p>
+    <p class="canva-show-description"><%= @canva.artist.name %></p>
+    <p class="canva-show-description"><%= @canva.technique %></p>
+    <p class="canva-show-description"><%= @canva.height %> x <%= @canva.width %> cm</p>
+    <p class="canva-show-description"><%= @canva.year %></p>
+    <p class="canva-show-reference"><%= t '.reference' %><%= @canva.code %></p>
+    <p class="canva-show-reference"><%= I18n.translate(@canva.status) %></p>
+    <% if user_signed_in? %>
+      <p class="canva-show-description">R$ <%= @canva.price %></p>
+    <% end %>
+  </div>
+</div>
+<div class="bio-link show-link">
+  <a href="/isabelle-tuchband/bio">
+    <div class="store-btn-container show">
+      <button class="store-btn show-btn"><span><%= t '.biography_link' %></span></button>
+    </div>
+  </a>
+  <a href="https://wa.me/5511982113406?text=Lista%20de%20preços%20Isabelle%20Tuchband" target="_blank">
+    <div class="store-btn-container show">
+      <button class="store-btn show-btn"><span><%= t '.price_list' %></span></button>
+    </div>
+  </a>
 </div>
 
-<div>
-  <p class="canva-show-title"><%= @canva.title %></p>
-  <p class="canva-show-description"><%= @canva.technique %></p>
-  <p class="canva-show-description"><%= @canva.height %> x <%= @canva.width %> cm</p>
-  <p class="canva-show-description"><%= @canva.year %></p>
-  <p class="canva-show-reference"><%= t '.reference' %><%= @canva.code %></p>
-  <% if user_signed_in? %>
-    <p class="canva-show-description">R$ <%= @canva.price %></p>
-  <% end %>
-</div>
 <% if user_signed_in? %>
   <div class="buttons-grid form-admin">
     <% if @canva.available? %>

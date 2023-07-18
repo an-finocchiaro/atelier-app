@@ -1,4 +1,5 @@
 pt-BR:
   artists:
     show:
-      user: "Usuário: "
+      biography_link: "VER BIOGRAFIA"
+      price_list: "SOLICITAR LISTA DE PREÇOS"

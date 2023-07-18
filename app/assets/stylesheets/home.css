@@ -147,9 +147,7 @@ select {
   margin-left: 7%;
   font-weight: 700;
 }
-.canva-img {
-  max-height: 300px;
-}
+
 /** navbar **/
 .topnav {
   position:relative;
