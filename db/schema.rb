@@ -47,7 +47,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_015131) do
 
   create_table "canvas", force: :cascade do |t|
     t.integer "artist_id", null: false
-    t.integer "code"
+    t.string "code"
     t.integer "status", default: 0
     t.integer "display", default: 0
     t.string "collection_name"
@@ -55,7 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_015131) do
     t.string "technique"
     t.integer "height"
     t.integer "width"
-    t.integer "year"
+    t.string "year"
     t.string "frame"
     t.integer "price"
     t.datetime "created_at", null: false
@@ -71,7 +71,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_28_015131) do
     t.string "technique"
     t.integer "height"
     t.integer "width"
-    t.integer "year"
+    t.string "year"
     t.string "edition"
     t.integer "price"
     t.datetime "created_at", null: false

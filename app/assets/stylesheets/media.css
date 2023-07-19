@@ -535,9 +535,6 @@
   .artist-surname.emile {
     margin-top: -8vw;
   }
-  .center {
-    transform: scale(80%);
-  }
   .atelier-grid {
     height: 1100px;
   }
@@ -725,10 +722,11 @@
   }
   .bio-title-name {
     height: 70px;
-    font-size: 11vmax;
+    font-size: 8.5vmax;
     letter-spacing: 1px;
   }
   .bio-title-bio {
     height: 70px;
+    padding-top: 5vh;
   }
 }

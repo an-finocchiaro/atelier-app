@@ -1,0 +1,108 @@
+<section class="atelier-section">
+  <div class="atelier-grid">
+    <div class="artist-description">
+      <p class="artist-title">VERENA MATZEN</p>
+      <p class="artist-text"><%= t '.verena_minibio' %></p>
+    </div>
+    <div class="atelier-images">
+      <div class="slider">
+        <ul class="slider-ul center">
+          <li>
+            <img src="/assets/verena/vm2.jpeg" alt="Verena Matzen pintando" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/verena/vm7.jpeg" alt="Desenho de Verena Matzen" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/verena/vm5.jpeg" alt="Verena Matzen em cavalgada" class="slider-img">
+          </li>
+        </ul>
+      </div>
+      <div class="slider fixed-slide">
+        <img src="/assets/verena/vm4.jpeg" alt="Verena Matzen em frente a mural pintado por ela" class="slider-img">
+      </div>
+      <div class="slider">
+        <ul class="slider-ul slider-dois">
+          <li>
+            <img src="/assets/verena/vm13.jpeg" alt="Pintura de Verena Matzen" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/verena/vm9.jpeg" alt="Verena Matzen com suas pinturas" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/verena/vm6.jpeg" alt="Verena Matzen com obra feita para doação" class="slider-img">
+          </li>
+        </ul>
+      </div>
+      <div class="slider fixed-slide">
+        <img src="/assets/verena/vm10.jpeg" alt="Pintura de Verena Matzen" class="slider-img">
+      </div>
+      <div class="slider">
+        <ul class="slider-ul slider-tres">
+          <li>
+            <img src="/assets/verena/vm8.jpeg" alt="Pintura de Verena Matzen" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/verena/vm12.jpeg" alt="Verena Matzen com pintura" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/verena/vm1.JPEG" alt="Autorretrato de Verena Matzen" class="slider-img">
+          </li>
+        </ul>
+      </div>
+      <div class="slider">
+        <ul class="slider-ul">
+          <li>
+            <img src="/assets/verena/vm11.jpeg" alt="Verena Matzen no atelier" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/verena/vm3.jpeg" alt="Verena Matzen em Paris" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/verena/vm14.jpeg" alt="pintura de Verena Matzen" class="slider-img">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="bio-link">
+    <a href="/verena-matzen/bio">
+      <div class="store-btn-container">
+        <button class="store-btn bio-btn"><span><%= t '.biography_link' %></span></button>
+      </div>
+    </a>
+    <a href="https://wa.me/5511982113406?text=Lista%20de%20preços%20Verena%20Matzen" target="_blank">
+      <div class="store-btn-container">
+        <button class="store-btn bio-btn"><span><%= t '.price_list' %></span></button>
+      </div>
+    </a>
+  </div>
+</section>
+<section class="work-section">
+  <div class="work-head">
+    <p class="work-head-title">PINTURAS | PAINTINGS | PEINTURES</p><br>
+  </div>
+  <div class="space"></div>
+  <div class="canvas-grid-admin work-section">
+    <% if @canvas.any? %>
+      <% @canvas.each do |canva| %>
+        <% if canva.exhibit? %>
+          <div class="canvas-card-admin work-card">
+            <div class="img-box-admin">
+              <% if canva.image.attached? %>
+                <%= link_to image_tag(canva.image, class: "canvas-img-admin work-img"), canva %>
+              <% else %>
+                <p><%= t '.missing_img' %></p>
+              <% end %>
+            </div>
+            <p class="title-adm work-title"><%= link_to canva.title, canva_path(canva.id) %></p>
+            <p class="desc-adm work-desc"><%= canva.height %> x <%= canva.width %> cm</p>
+            <p class="desc-adm work-desc"><%= canva.technique %>, <%= canva.year %></p>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</section>

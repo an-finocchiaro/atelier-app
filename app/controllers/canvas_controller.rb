@@ -77,5 +77,4 @@ class CanvasController < ApplicationController
   def canva_params
     params.require(:canva).permit(:artist_id, :code, :collection_name, :title, :technique, :height, :width, :year, :frame, :price, :image)
   end
-
 end

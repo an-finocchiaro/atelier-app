@@ -8,7 +8,7 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.string :technique
       t.integer :height
       t.integer :width
-      t.integer :year
+      t.string :year
       t.string :edition
       t.integer :price
 

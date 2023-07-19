@@ -2,7 +2,7 @@ class CreateCanvas < ActiveRecord::Migration[7.0]
   def change
     create_table :canvas do |t|
       t.references :artist, null: false, foreign_key: true
-      t.integer :code
+      t.string :code
       t.integer :status, default: 0
       t.integer :display, default: 0
       t.string :collection_name
@@ -10,7 +10,7 @@ class CreateCanvas < ActiveRecord::Migration[7.0]
       t.string :technique
       t.integer :height
       t.integer :width
-      t.integer :year
+      t.string :year
       t.string :frame
       t.integer :price
 

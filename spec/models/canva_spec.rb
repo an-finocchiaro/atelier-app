@@ -50,14 +50,7 @@ RSpec.describe Canva, type: :model do
 
       expect(canva.valid?).to eq false
     end
-
-    it 'false when code is not a number' do
-      artist = Artist.create!(name: 'Julia Piva')
-      canva = Canva.new(artist_id: artist.id, code: 'code', collection_name: 'Brasileiras', title: 'Nuvens', technique: 'óleo sobre tela', height: 100, width: 120, year: 2011, frame:'sem moldura', price: 10000)
-
-      expect(canva.valid?).to eq false
-    end
-
+    
     it 'false when height is not a number' do
       artist = Artist.create!(name: 'Julia Piva')
       canva = Canva.new(artist_id: artist.id, code: 108, collection_name: 'Brasileiras', title: 'Nuvens', technique: 'óleo sobre tela', height: 'cem', width: 120, year: 2011, frame:'sem moldura', price: 10000)

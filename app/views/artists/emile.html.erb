@@ -1,0 +1,108 @@
+<section class="atelier-section">
+  <div class="atelier-grid">
+    <div class="artist-description">
+      <p class="artist-title">ÉMILE TUCHBAND</p>
+      <p class="artist-text"><%= t '.emile_minibio' %></p>
+    </div>
+    <div class="atelier-images">
+      <div class="slider">
+        <ul class="slider-ul center">
+          <li>
+            <img src="/assets/emile/emile_atelier.jpeg" alt="Émile Tuchband em seu atelier" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/emile/emile_father.jpeg" alt="Émile Tuchband com seu pai e seu irmão na França" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/emile/et9.jpeg" alt="Pintura de Émile Tuchband" class="slider-img">
+          </li>
+        </ul>
+      </div>
+      <div class="slider fixed-slide">
+        <img src="/assets/emile/et2.jpeg" alt="Pintura de Émile Tuchband" class="slider-img">
+      </div>
+      <div class="slider">
+        <ul class="slider-ul slider-dois">
+          <li>
+            <img src="/assets/emile/et12.jpeg" alt="Pintura de Émile Tuchband" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/emile/et13.jpeg" alt="Émile e Marlene Tuchband" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/emile/et11.jpeg" alt="Pintura de Émile Tuchband" class="slider-img">
+          </li>
+        </ul>
+      </div>
+      <div class="slider fixed-slide">
+        <img src="/assets/emile/et14.jpeg" alt="Émile Tuchband em Paris na galeria Marcel Bernheim" class="slider-img">
+      </div>
+      <div class="slider">
+        <ul class="slider-ul slider-tres">
+          <li>
+            <img src="/assets/emile/et10.jpeg" alt="Pintura de Émile Tuchband" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/emile/et5.jpg" alt="Émile e Marlene Tuchband" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/emile/et8.jpeg" alt="Pintura de Émile Tuchband" class="slider-img">
+          </li>
+        </ul>
+      </div>
+      <div class="slider">
+        <ul class="slider-ul">
+          <li>
+            <img src="/assets/emile/et6.jpg" alt="Émile e Marlene Tuchband" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/emile/coq.jpeg" alt="Pintura de Émile Tuchband coq" class="slider-img">
+          </li>
+          <li>
+            <img src="/assets/emile/et4.jpg" alt="Émile e Marlene Tuchband" class="slider-img">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="bio-link">
+    <a href="/emile-tuchband/bio">
+      <div class="store-btn-container">
+        <button class="store-btn bio-btn"><span><%= t '.biography_link' %></span></button>
+      </div>
+    </a>
+    <a href="https://wa.me/5511982113406?text=Lista%20de%20preços%20Emile%20Tuchband" target="_blank">
+      <div class="store-btn-container">
+        <button class="store-btn bio-btn"><span><%= t '.price_list' %></span></button>
+      </div>
+    </a>
+  </div>
+</section>
+<section class="work-section">
+  <div class="work-head">
+    <p class="work-head-title">PINTURAS | PAINTINGS | PEINTURES</p><br>
+  </div>
+  <div class="space"></div>
+  <div class="canvas-grid-admin work-section">
+    <% if @canvas.any? %>
+      <% @canvas.each do |canva| %>
+        <% if canva.exhibit? %>
+          <div class="canvas-card-admin work-card">
+            <div class="img-box-admin">
+              <% if canva.image.attached? %>
+                <%= link_to image_tag(canva.image, class: "canvas-img-admin work-img"), canva %>
+              <% else %>
+                <p><%= t '.missing_img' %></p>
+              <% end %>
+            </div>
+            <p class="title-adm work-title"><%= link_to canva.title, canva_path(canva.id) %></p>
+            <p class="desc-adm work-desc"><%= canva.height %> x <%= canva.width %> cm</p>
+            <p class="desc-adm work-desc"><%= canva.technique %>, <%= canva.year %></p>
+          </div>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</section>
