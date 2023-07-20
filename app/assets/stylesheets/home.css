@@ -149,7 +149,6 @@ select {
 /** navbar **/
 .topnav {
   position:relative;
-  
   background-color: #FF6EC7;
   overflow:hidden;
   z-index: 7;

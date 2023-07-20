@@ -50,3 +50,5 @@ https://developers.google.com/search/docs/essentials?visit_id=638250625273947641
   <p class="credit">all rights reserved 2023 © Atelier Cité - webdesign.</p>
   <a href="mailto:andrea@luhz.com.br?subject=webdesign Cité" class="a-link footer-link credit">luhz</a>
 </div>
+
+<a href="/news" class="nav-link"><%= t '.news' %></a>
