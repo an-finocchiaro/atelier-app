@@ -197,3 +197,16 @@
   background-color: #fd2b7e;
   box-shadow:none;
 }
+.contact-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact-img-box {
+  width: 80%;
+  height: 450px;
+}
+.contact-img {
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+}
