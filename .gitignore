@@ -37,4 +37,5 @@
 
 /spec/system/admin/*
 /texto
+/.env
 

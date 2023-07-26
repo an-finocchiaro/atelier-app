@@ -1,0 +1,43 @@
+<div class="bio-title-box">
+  <p class="bio-title-bio">We'd love to hear from you, send us a message below.</p>
+  <p class="bio-title-name">CONTATO</p>
+</div>
+<div class="contact-box">
+  <div class="contact-img-box">
+    <img src="/assets/index/272.JPEG" alt="pintura de Isabelle Tuchband" class="contact-img">
+  </div>
+  <div class="contact-message">
+    <%= form_for @contact do |form| %>
+      <% if @contact.errors.any? %>
+        <div id="error_explanation" class="form-errors-box">
+          <div class="form-errors"><%= pluralize(@contact.errors.count, "error") %> prohibited this page from being saved:</div>
+            <ul class="errors">
+              <% @contact.errors.each do |error| %>
+                <li class="errors-li"><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+      <div class="form-admin">
+          <%= form.label :name %>
+          <%= form.text_field :name %>
+      </div>
+      <div class="form-admin">
+          <%= form.label :email %>
+          <%= form.email_field :email %>
+      </div>
+      <div class="form-admin">
+          <%= form.label :message %>
+          <%= form.text_area :message %>
+      </div>
+      <div class="hidden">
+          <%= form.label :nickname %>
+          <%= form.text_field :nickname %>
+      </div>
+      <div class="store-btn bio-btn">
+          <%= form.submit "Send Message" %>
+      </div>
+    <% end %>
+  </div>
+</div>

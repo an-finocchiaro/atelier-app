@@ -52,3 +52,9 @@ https://developers.google.com/search/docs/essentials?visit_id=638250625273947641
 </div>
 
 <a href="/news" class="nav-link"><%= t '.news' %></a>
+
+https://www.railscoder.com/articles/adding-contact-forms-in-rails-7-with-mail_form-gem
+https://medium.com/@Gabriel.Valle/rails-and-mail-form-f4bc4f991c83
+https://www.codementor.io/@simi736/send-email-using-mailform-gem-and-sendgrid-on-heroku-using-rails-5-eyy4zuwnl
+https://stackoverflow.com/questions/39217573/rails-mailform-gem-not-working
+https://github.com/heartcombo/mail_form/tree/main

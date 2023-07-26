@@ -95,6 +95,10 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     ffi (1.15.5)
     globalid (1.1.0)
@@ -121,6 +125,9 @@ GEM
       net-imap
       net-pop
       net-smtp
+    mail_form (1.10.0)
+      actionmailer (>= 5.2)
+      activemodel (>= 5.2)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -240,9 +247,11 @@ DEPENDENCIES
   capybara
   debug
   devise
+  dotenv-rails
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
+  mail_form
   puma (~> 5.0)
   rails (~> 7.0.4)
   rspec-rails

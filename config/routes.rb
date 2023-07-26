@@ -11,9 +11,11 @@ Rails.application.routes.draw do
   get '/emile-tuchband/bio', to: 'artists#emile_bio'
   get '/verena-matzen',  to: 'artists#verena'
   get '/verena-matzen/bio', to: 'artists#verena_bio'
-  get '/news', to: 'home#news'
-  get '/contact', to: 'home#contact'
-
+  
+  resources :contacts, only: [:new, :create ]
+  get '/contacts', to: 'contacts#new', as: 'contact'
+  get 'contacts/sent', to: 'contacts#sent'
+ 
   resources :artists, only: [:new, :create, :index, :show] 
 
   resources :canvas, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
