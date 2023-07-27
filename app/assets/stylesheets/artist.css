@@ -197,16 +197,77 @@
   background-color: #fd2b7e;
   box-shadow:none;
 }
+.contact-page-title {
+  background-color: #f3ff08;
+  font-family: 'Anton';
+  color: white;
+  font-size: 6vmax;
+  padding-left: 30px;
+}
 .contact-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 450px;
+  background-color: #f3ff08;
+  margin-top: -50px;
 }
 .contact-img-box {
   width: 80%;
   height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact-img {
   width: 100%;
   object-fit: cover;
+}
+.contact-message.form-admin {
+  width: 80%;
+}
+.form-errors-box {
+  font-family: 'Encode Sans Semi Condensed';
+  color: #211b15;
+  font-size: 1rem;
+}
+.hidden-box {
+  display: none;
+}
+.form-input.text-area {
+  height: 110px;
+}
+.send-message-btn {
+  width: 100%;
+  background-color:#21ab9b;
+}
+.send-message-btn:hover {
+  background-color:#fd2b7e;
+}
+.sent-message-box {
+  background-color: #ff6fc7;
+  height: 370px;
+}
+.merci-box {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Anton';
+  font-size: 7rem;
+  justify-content: center;
+}
+.merci-box p {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #211b15;
+  padding-right: 3px;
+  padding-top: 15px;
+  color: #c7ff36;
+}
+.merci-text {
+  font-family: 'Encode Sans Semi Condensed';
+  color: #211b15;
+  font-size: 1.2rem;
   text-align: center;
+}
+.merci-text h3 {
+  padding-top: 40px;
+  padding-bottom: 15px;
 }

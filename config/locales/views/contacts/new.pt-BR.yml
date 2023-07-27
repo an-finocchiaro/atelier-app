@@ -1,0 +1,9 @@
+pt-BR:
+  contacts:
+    new:
+      contact: "CONTATO"
+      name: 'nome'
+      email: 'e-mail'
+      message: 'mensagem'
+      send_message: 'enviar mensagem'
+      contact_text: 'prohibited this page from being saved:'

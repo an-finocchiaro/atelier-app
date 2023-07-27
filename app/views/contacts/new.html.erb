@@ -1,42 +1,39 @@
-<div class="bio-title-box">
-  <p class="bio-title-bio">We'd love to hear from you, send us a message below.</p>
-  <p class="bio-title-name">CONTATO</p>
+<div>
+  <p class="contact-page-title"><%= t '.contact' %></p>
 </div>
 <div class="contact-box">
   <div class="contact-img-box">
-    <img src="/assets/index/placa.jpg" alt="placa original do Atelier Cité" class="contact-img">
+    <img src="/assets/store/jevous.jpg" alt="je vous souhaite" class="contact-img">
   </div>
   <div class="contact-message form-admin">
     <%= form_for @contact do |form| %>
       <% if @contact.errors.any? %>
         <div id="error_explanation" class="form-errors-box">
-          <div class="form-errors"><%= pluralize(@contact.errors.count, "error") %> prohibited this page from being saved:</div>
-            <ul class="errors">
-              <% @contact.errors.each do |error| %>
-                <li class="errors-li"><%= error.full_message %></li>
-              <% end %>
-            </ul>
-          </div>
+          <ul>
+            <% @contact.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
         </div>
       <% end %>
-      <div class="form-admin">
-          <%= form.label :name %>
-          <%= form.text_field :name %>
+      <div>
+          <%= form.label :name, (t '.name') %>
+          <%= form.text_field :name, class: "form-input" %>
       </div>
-      <div class="form-admin">
-          <%= form.label :email %>
-          <%= form.email_field :email %>
+      <div>
+          <%= form.label :email, (t '.email') %>
+          <%= form.email_field :email, class: "form-input" %>
       </div>
-      <div class="form-admin">
-          <%= form.label :message %>
-          <%= form.text_area :message %>
+      <div>
+          <%= form.label :message, (t '.message') %>
+          <%= form.text_area :message, class: "form-input text-area" %>
       </div>
-      <div class="hidden">
-          <%= form.label :nickname %>
-          <%= form.text_field :nickname %>
+      <div>
+          <%= form.label :nickname, class: "hidden-box" %>
+          <%= form.text_field :nickname, class: "hidden-box" %>
       </div>
-      <div class="store-btn bio-btn">
-          <%= form.submit "Send Message" %>
+      <div>
+          <%= form.submit (t '.send_message'), class: "form-button send-message-btn" %>
       </div>
     <% end %>
   </div>

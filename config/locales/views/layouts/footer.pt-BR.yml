@@ -2,5 +2,5 @@ pt-BR:
   layouts:
     footer:
       contact: "CONTATO"
-      send_message: "ENVIAR MENSAGEM"
+      send_message: "ENVIAR WHATSAPP"
       send_email: "ENVIAR EMAIL"
