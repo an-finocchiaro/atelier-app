@@ -404,6 +404,24 @@
   .bio-img-box {
     height:auto;
   }
+  .contact-page-title {
+    font-size: 11vmax;
+    padding-left: 30px;
+  }
+  .contact-box {
+    grid-template-columns: 1fr;
+    height: 600px;
+    margin-top: 0;
+  }
+  .contact-img-box {
+    height: 200px;
+    margin-left: 12%;
+  }
+  .contact-message.form-admin {
+    width: 90%;
+    height: 400px;
+    margin-left: 5%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -678,6 +696,11 @@
     width: 100%;
     padding-left: 35px;
   }
+  .merci-text {
+    width: 80%;
+    margin-left: 10%;
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -728,5 +751,22 @@
   .bio-title-bio {
     height: 70px;
     padding-top: 5vh;
+  }
+  .contact-page-title {
+    font-size: 15vmax;
+  }
+  .contact-box {
+    height: 540px;
+  }
+  .contact-img-box {
+    height: 140px;
+  }
+  .contact-img {
+    width: 120%;
+  }
+  .contact-message.form-admin {
+    width: 90%;
+    height: 400px;
+    margin-left: 20px;
   }
 }
