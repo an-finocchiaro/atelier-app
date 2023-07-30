@@ -39,7 +39,7 @@ jobs:
         run: yarn install
         
       - name: Set up database schema
-        run: bin/rails db:schema:load
+        run: bin/rails db:migrate
 
       - name: Set up asset pipeline
         run: | 
