@@ -16,7 +16,7 @@ jobs:
     env:
       GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
       GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-      RAILS_ENV: development
+      
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
