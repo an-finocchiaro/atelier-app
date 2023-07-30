@@ -1,0 +1,27 @@
+en:
+  available: 'work available'
+  collection: 'artist collection'
+  sold: 'private collection'
+  hide: 'Do not display'
+  show: 'Display'
+  activerecord:
+    models:
+      canva:
+        one: Canva
+        other: Canvas
+    attributes:
+      canva:
+        artist_id: 'Artist'
+        artist: 'Artist'
+        code: 'Code'
+        status: 'Status'
+        display: 'Display'
+        collection_name: 'Collection'
+        title: 'Title'
+        technique: 'Technique'
+        height: 'Height'
+        width: 'Width'
+        year: 'Year'
+        frame: 'Frame'
+        price: 'Price'
+        image: 'Photo'

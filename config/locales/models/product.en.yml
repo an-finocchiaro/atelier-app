@@ -1,0 +1,20 @@
+en:
+  activerecord:
+    models:
+      product:
+        one: Product
+        other: Products
+    attributes:
+      product:
+        artist_id: 'Artist'
+        artist: 'Artist'
+        sku: 'Code'
+        collection_name: 'Collection'
+        title: 'Title'
+        technique: 'Technique'
+        height: 'Height'
+        width: 'Width'
+        year: 'Year'
+        edition: 'Edition'
+        price: 'Price'
+        image: 'Photo'

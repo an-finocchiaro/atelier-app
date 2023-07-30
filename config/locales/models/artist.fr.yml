@@ -1,0 +1,9 @@
+fr:
+  activerecord:
+    models:
+      artist:
+        one: artiste
+        other: artistes
+    attributes:
+      artist:
+        name: 'Nom'

@@ -1,0 +1,27 @@
+fr:
+  available: 'oeuvre disponible'
+  collection: "collection de l'artiste"
+  sold: 'collection privée'
+  hide: 'Ne pas afficher'
+  show: 'Afficher'
+  activerecord:
+    models:
+      canva:
+        one: Toile
+        other: Toiles
+    attributes:
+      canva:
+        artist_id: 'Artiste'
+        artist: 'Artiste'
+        code: 'Référence'
+        status: 'Situation'
+        display: 'Afficher'
+        collection_name: 'Collection'
+        title: 'Titre'
+        technique: 'Technique'
+        height: 'Hauteur'
+        width: 'Largeur'
+        year: 'Année'
+        frame: 'Cadre'
+        price: 'Prix'
+        image: 'Photo'

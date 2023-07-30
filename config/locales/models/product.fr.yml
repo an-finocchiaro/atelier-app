@@ -1,0 +1,20 @@
+fr:
+  activerecord:
+    models:
+      product:
+        one: Produit
+        other: Produits
+    attributes:
+      product:
+        artist_id: 'Artiste'
+        artist: 'Artiste'
+        sku: 'Référence'
+        collection_name: 'Collection'
+        title: 'Titre'
+        technique: 'Technique'
+        height: 'Hauteur'
+        width: 'Largeur'
+        year: 'Année'
+        edition: 'Edition'
+        price: 'Prix'
+        image: 'Photo'
