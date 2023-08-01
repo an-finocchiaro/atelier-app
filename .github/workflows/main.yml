@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: production
+      master.key: ${{ secrets.KEY }}
       GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
       GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
       
