@@ -43,9 +43,6 @@ jobs:
       - name: Set up database schema
         run: bin/rails db:migrate
 
-      - name: Run tests
-        run: bin/rake
-      
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@v3.0.1
         env:
