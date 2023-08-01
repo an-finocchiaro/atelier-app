@@ -38,6 +38,8 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 # process behavior so workers use less memory.
 #
 # preload_app!
+app_dir = File.expand_path("../..", __FILE__)
+bind "unix://#{app_dir}/tmp/sockets/puma.sock"
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
