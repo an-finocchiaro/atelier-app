@@ -53,8 +53,4 @@ jobs:
             REMOTE_USER: ${{ secrets.REMOTE_USER }}
             TARGET: ${{ secrets.TARGET }}
             EXCLUDE: "/dist/, /node_modules/"
-
-      - name: Start server
-        run: bundle exec rails s -p 3000 -b '0.0.0.0'
-        
             

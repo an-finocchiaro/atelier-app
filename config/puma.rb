@@ -19,7 +19,7 @@ port ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
 #
-environment ENV.fetch("RAILS_ENV") { "development" }
+environment ENV.fetch("RAILS_ENV") { "production" }
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
@@ -39,7 +39,7 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 #
 # preload_app!
 app_dir = File.expand_path("../..", __FILE__)
-bind "unix://#{app_dir}/tmp/sockets/puma.sock"
+bind "unix:///#{app_dir}/tmp/sockets/puma.sock"
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
