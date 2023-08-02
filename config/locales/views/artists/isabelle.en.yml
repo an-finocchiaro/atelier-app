@@ -1,7 +1,6 @@
 en:
   artists:
     isabelle:
-      user: "User: "
       biography_link: "BIOGRAPHY"
       price_list: "REQUEST THE PRICE LIST"
       missing_img: "Image unavailable"
