@@ -1,36 +1,28 @@
 name: "Ruby on Rails CI"
 
-env:
-  RUBY_VERSION: 3.2.2
-  NODE_VERSION: 19.4.0
-  BUNDLER_VERSION: 2.4.12
-  
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 jobs:
-  rails-workflow:
+  deploy-app:
     runs-on: ubuntu-latest
-    env:
-      RAILS_ENV: production
-      RAILS_MASTER_KEY: ${{ secrets.KEY }}
-      GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
-      GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-      
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
       - name: Deploy to Server
-        uses: easingthemes/ssh-deploy@v3.0.1
+        uses: easingthemes/ssh-deploy@v2
         env:
-            SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-            ARGS: "-rlgoDzvc -i --delete"
-            SOURCE: ""
-            REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-            REMOTE_USER: ${{ secrets.REMOTE_USER }}
-            TARGET: ${{ secrets.TARGET }}
-            EXCLUDE: "/dist/, /node_modules/"
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
+          SOURCE: ""
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.TARGET }}
+          EXCLUDE: "/dist/, /node_modules/"
+          RAILS_ENV: production
+          RAILS_MASTER_KEY: ${{ secrets.KEY }}
+          GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
             
