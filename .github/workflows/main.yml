@@ -21,8 +21,5 @@ jobs:
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.TARGET }}
           EXCLUDE: "/dist/, /node_modules/"
-          RAILS_ENV: ${{ secrets.RAILS_ENV }}
-          RAILS_MASTER_KEY: ${{ secrets.KEY }}
-          GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
-          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          
             
