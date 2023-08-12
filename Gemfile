@@ -7,30 +7,30 @@ ruby "3.2.2"
 gem "rails", "~> 7.0.4"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails"
+gem 'sprockets-rails', '~> 3.4', '>= 3.4.2'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma-daemon', require: false
+gem 'puma-daemon', '~> 0.3.2', require: false
 gem "puma", "~> 5.0"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails"
+gem 'importmap-rails', '~> 1.1', '>= 1.1.5'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails"
+gem 'turbo-rails', '~> 1.4'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails"
+gem 'stimulus-rails', '~> 1.2', '>= 1.2.1'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+gem 'jbuilder', '~> 2.11', '>= 2.11.5'
 
-gem "devise"
-gem 'mail_form'
-gem 'dotenv-rails'
+gem 'devise', '~> 4.9', '>= 4.9.2'
+gem 'mail_form', '~> 1.10'
+gem 'dotenv-rails', '~> 2.8', '>= 2.8.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -45,13 +45,14 @@ gem 'dotenv-rails'
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
+gem 'bootsnap', '~> 1.16', require: false
 
 # Use Sass to process CSS
 # gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
+gem 'cloudinary', '~> 1.2', '>= 1.2.2'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
