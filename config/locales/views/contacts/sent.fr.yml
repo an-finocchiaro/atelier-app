@@ -1,0 +1,6 @@
+fr:
+  contacts:
+    sent:
+      tks: "THANKS"
+      message_sent: 'Message envoyé!'
+      message_sent_text: 'Nous avons bien reçu votre message et allons vous répondre le plus rapidement possible.'

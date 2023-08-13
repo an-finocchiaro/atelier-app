@@ -1,0 +1,6 @@
+en:
+  layouts:
+    footer:
+      contact: "CONTACT"
+      send_message: "SEND WHATSAPP"
+      send_email: "SEND EMAIL"

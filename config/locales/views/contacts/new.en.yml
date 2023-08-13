@@ -1,0 +1,9 @@
+en:
+  contacts:
+    new:
+      contact: "CONTACT"
+      name: 'name'
+      email: 'e-mail'
+      message: 'message'
+      send_message: 'send message'
+      contact_text: 'prohibited this page from being saved:'
