@@ -98,8 +98,8 @@
               <% end %>
             </div>
             <p class="title-adm work-title"><%= link_to canva.title, canva_path(canva.id) %></p>
-            <p class="desc-adm work-desc"><%= canva.height %> x <%= canva.width %> cm</p>
-            <p class="desc-adm work-desc"><%= canva.technique %>, <%= canva.year %></p>
+            <p class="desc-adm work-desc"><%= canva.height %> x <%= canva.width %> cm, <%= canva.year %></p>
+            <p class="desc-adm work-desc"><%= canva.technique %></p>
           </div>
         <% end %>
       <% end %>
