@@ -1,7 +1,7 @@
   <%= form_with(model: [@artist, @product]) do |f| %>
     <div>
       <%= f.label :artist_id %>
-      <%= f.collection_select :artist_id, @artists, :id, :name, class: "form-input" %>
+      <%= f.collection_select :artist_id, @artists, :id, :name %>
     </div>
     <br>
     <div>

@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
-  before_action :product_params, only: %i[new create update]
+  before_action :product_params, only: %i[create update]
 
   def new
     @product = Product.new
