@@ -11,7 +11,7 @@
               <p><%= t '.missing_img' %></p>
             <% end %>
           </div>
-          <p class="title-adm pl"><%= canva.title %></p>
+          <p class="title-adm pl"><%= link_to canva.title, canva_path(canva.id) %></p>
           <p class="desc-adm pl"><%= canva.technique %></p>
           <p class="desc-adm pl"><%= canva.height %> x <%= canva.width %> cm - <%= canva.year %> - <%= t '.code' %>: <%= canva.code %></p>
           <p class="desc-adm pl">R$ <%= canva.price %></p>

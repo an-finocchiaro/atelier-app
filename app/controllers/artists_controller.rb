@@ -43,17 +43,17 @@ class ArtistsController < ApplicationController
   def verena_bio
   end
 
-  def generateplet
+  def emile_tuchband_price_list
     @artist = Artist.find(2)
     @canvas = Canva.where(artist_id: 2)
   end
 
-  def generateplit
+  def isabelle_tuchband_price_list
     @artist = Artist.find(1)
     @canvas = Canva.where(artist_id: 1)
   end
 
-  def generateplvm
+  def verena_matzen_price_list
     @artist = Artist.find(3)
     @canvas = Canva.where(artist_id: 3)
   end
