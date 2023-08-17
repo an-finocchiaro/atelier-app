@@ -3,5 +3,5 @@ class Product < ApplicationRecord
   has_one_attached :image
   validates :sku, :title, :technique, :height, :width, :year, :price, presence: true
   validates :height, :width, :price, numericality: true
-  validates :sku, length: { in: 3..7 }
+  validates :sku, length: { in: 3..10 }
 end

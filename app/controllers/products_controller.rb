@@ -48,5 +48,4 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(:artist_id, :sku, :collection_name, :title, :technique, :height, :width, :year, :edition, :price, :image)
   end
- 
 end

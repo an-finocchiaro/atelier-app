@@ -79,9 +79,9 @@ RSpec.describe Product, type: :model do
       expect(product.valid?).to eq false
     end
 
-    it 'false when sku length is > 7' do
+    it 'false when sku length is > 10' do
       artist = Artist.create!(name: 'Isabelle Tuchband')
-      product = Product.new(artist_id: artist.id, sku: 'IT202728', collection_name: 'Sevilla', title: 'Blue Gitana', technique: 'acrílica sobre tela', height: 50, width: 60, year: 2020, edition:'exemplar único', price: 5000)
+      product = Product.new(artist_id: artist.id, sku: 'IT202728H11', collection_name: 'Sevilla', title: 'Blue Gitana', technique: 'acrílica sobre tela', height: 50, width: 60, year: 2020, edition:'exemplar único', price: 5000)
 
       expect(product.valid?).to eq false
     end
