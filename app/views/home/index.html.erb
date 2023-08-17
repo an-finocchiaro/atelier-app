@@ -150,7 +150,9 @@
     <div class="store-head reveal">
       <p class="store-title">STORE | LIMITED EDITIONS</p>
         <div class="store-btn-container">
-          <button class="store-btn"><span>PURCHASE JOY</span></button>
+          <a href="https://loja.ateliercite.com.br" target="_blank">
+            <button class="store-btn"><span>PURCHASE JOY</span></button>
+          </a>
         </div>
     </div>
   <div class="store-grid reveal">
@@ -169,7 +171,7 @@
           <p class="product-description"><%= product.height %> x <%= product.width %> cm - <%= product.year %></p>
           <p class="product-description"><%= product.technique %></p>
           <p class="product-description"><%= product.edition %></p>
-          <a href="https://loja.ateliercite.com.br/<%= product.collection_name %>"><p  class="product-link"><%= t '.store_link' %></p></a>
+          <a href="https://loja.ateliercite.com.br/<%= product.collection_name %>" target="_blank"><p  class="product-link"><%= t '.store_link' %></p></a>
         </div>
       <% end %>
     <% end %>
