@@ -1,0 +1,22 @@
+<div class="canvas-pl">
+  <h2 class="artist-name-admin"><%= @artist.name %></h2><br><br>
+  <div class="canvas-grid-admin">
+    <% if @canvas.any? %>
+      <% @canvas.each do |canva| %>
+        <div class="canvas-card-admin">
+          <div class="img-box-admin">
+            <% if canva.image.attached? %>
+              <%= link_to image_tag(canva.image, class: "canvas-img-admin"), canva.image, :target => '_blank' %>
+            <% else %>
+              <p><%= t '.missing_img' %></p>
+            <% end %>
+          </div>
+          <p class="title-adm pl"><%= canva.title %></p>
+          <p class="desc-adm pl"><%= canva.technique %></p>
+          <p class="desc-adm pl"><%= canva.height %> x <%= canva.width %> cm - <%= canva.year %> - <%= t '.code' %>: <%= canva.code %></p>
+          <p class="desc-adm pl">R$ <%= canva.price %></p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

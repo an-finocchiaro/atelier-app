@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get '/emile-tuchband/bio', to: 'artists#emile_bio'
   get '/verena-matzen',  to: 'artists#verena'
   get '/verena-matzen/bio', to: 'artists#verena_bio'
+  get '/generateplet', to: 'artists#generateplet'
+  get '/generateplit', to: 'artists#generateplit'
+  get '/generateplvm', to: 'artists#generateplvm'
   
   resources :contacts, only: [:new, :create ]
   get '/contacts', to: 'contacts#new', as: 'contact'
