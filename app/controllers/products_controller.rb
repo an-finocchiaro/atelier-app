@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
 
   def destroy
     @product.destroy
-    redirect_to root_path, notice: 'Galpão removido com sucesso'
+    redirect_to root_path, notice: 'Produto removido com sucesso'
   end
 
   private

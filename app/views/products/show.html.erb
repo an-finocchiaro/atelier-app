@@ -17,7 +17,7 @@
 </div>
 <% if user_signed_in? %>
   <div class="buttons-grid form-admin">
-    <%= link_to 'Editar', edit_product_path(@product.id), class: "edit-button" %><br><br>
-    <%= button_to 'Excluir produto', product_path(@product.id), method: :delete, class:"form-button" %>
+    <%= link_to 'Editar', edit_product_path(@product.id) %>
+    <%= button_to 'Excluir produto', product_path(@product.id), method: :delete %>
   </div>
 <% end %>
