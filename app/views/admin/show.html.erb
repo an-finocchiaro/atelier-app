@@ -6,7 +6,7 @@
         <div class="canvas-card-admin">
           <div class="img-box-admin">
             <% if canva.image.attached? %>
-              <%= link_to image_tag(canva.image, class: "canvas-img-admin"), canva.image, :target => '_blank' %>
+              <%= link_to cl_image_tag(canva.image, class: "canvas-img-admin"), canva.image, :target => '_blank' %>
             <% else %>
               <p><%= t '.missing_img' %></p>
             <% end %>

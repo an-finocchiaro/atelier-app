@@ -92,7 +92,7 @@
           <div class="canvas-card-admin work-card">
             <div class="img-box-admin">
               <% if canva.image.attached? %>
-                <%= link_to image_tag(canva.image, class: "canvas-img-admin work-img"), canva %>
+                <%= link_to cl_image_tag(canva.image, class: "canvas-img-admin work-img"), canva %>
               <% else %>
                 <p><%= t '.missing_img' %></p>
               <% end %>

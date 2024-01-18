@@ -1,7 +1,7 @@
 <div class="canva-show-section">
   <div class="canva-img-box">
     <% if @canva.image.attached? %>
-      <%= link_to image_tag(@canva.image, class:"canva-img"), @canva.image, target:'_blank' %>
+      <%= link_to cl_image_tag(@canva.image, class:"canva-img"), @canva.image, target:'_blank' %>
     <% end %>
   </div>
 
