@@ -161,7 +161,7 @@
         <div class="store-card reveal">
           <div class="product-img-box">
             <% if product.image.attached? %>
-              <%= cl_image_tag product.image, class: "product-img" %>
+              <%= image_tag product.image, class: "product-img" %>
             <% else %>
               <p><%= t '.missing_img' %></p>
             <% end %>

@@ -6,7 +6,7 @@
         <div class="canvas-card-admin">
           <div class="img-box-admin">
             <% if product.image.attached? %>
-              <%= link_to cl_image_tag(product.image, class: "canvas-img-admin"), product.image, :target => '_blank' %>
+              <%= link_to image_tag(product.image, class: "canvas-img-admin"), product.image, :target => '_blank' %>
             <% else %>
               <p><%= t '.missing_img' %></p>
             <% end %>
