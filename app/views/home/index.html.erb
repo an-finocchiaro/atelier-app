@@ -165,6 +165,10 @@
             <% else %>
               <p><%= t '.missing_img' %></p>
             <% end %>
+            <p class="product-title"><% product.title %></p>
+            <p class="product-description"><% product.artist.name %></p><br>
+            <p class="product-description"><% product.edition %></p>
+            <a href="https://loja.ateliercite.com.br/<% product.collection_name %>" target="_blank"><p  class="product-link"><% t '.store_link' %></p></a>
           </div>
         </div>
       <% end %>
