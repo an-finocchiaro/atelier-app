@@ -42,7 +42,7 @@
     </div>
     <div>
       <%= f.label :image %>
-      <%= f.file_field :image, direct_upload: true, accept: 'image/jpeg' %>
+      <%= f.file_field :image, accept: 'image/jpeg' %>
     </div>
     <%= f.submit (t '.save'), class: "form-button" %>
   <% end %>
