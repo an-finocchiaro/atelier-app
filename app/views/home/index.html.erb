@@ -145,33 +145,4 @@
     </div>
   </div>
 </section>
-<section class="store-section">
-  <div class="store">
-    <div class="store-head reveal">
-      <p class="store-title">STORE | LIMITED EDITIONS</p>
-        <div class="store-btn-container">
-          <a href="https://loja.ateliercite.com.br" target="_blank">
-            <button class="store-btn"><span>PURCHASE JOY</span></button>
-          </a>
-        </div>
-    </div>
-  <div class="store-grid reveal">
-    <% if @products.any? %>
-      <% @products.each do |product| %>
-        <div class="store-card reveal">
-          <div class="product-img-box">
-            <% if product.image.attached? %>
-              <%= image_tag product.image, class: "product-img" %>
-            <% else %>
-              <p><%= t '.missing_img' %></p>
-            <% end %>
-            <p class="product-title"><% product.title %></p>
-            <p class="product-description"><% product.artist.name %></p><br>
-            <p class="product-description"><% product.edition %></p>
-            <a href="https://loja.ateliercite.com.br/<% product.collection_name %>" target="_blank"><p  class="product-link"><% t '.store_link' %></p></a>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-</section>
+
