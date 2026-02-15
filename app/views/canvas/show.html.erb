@@ -10,7 +10,7 @@
     <p class="canva-show-description"><%= @canva.artist.name %></p>
     <p class="canva-show-description"><%= @canva.height %> x <%= @canva.width %> cm, <%= @canva.year %></p>
     <p class="canva-show-description"><%= @canva.technique %></p><br>
-    <p class="canva-show-reference"><%= t '.reference' %><%= @canva.code %> - <%= I18n.translate(@canva.status) %></p>
+    
     <% if user_signed_in? %>
       <p class="canva-show-description">R$ <%= @canva.price %></p>
     <% end %>
